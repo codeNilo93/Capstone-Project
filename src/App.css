@@ -13,15 +13,12 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.background__image{
+  padding-top: 120px;
+  background-image: url('/src/assets/images/mainBack.jpg');
+  background-size: cover;
+  background-position:  center;
+  Background-repeat: no-repeat;
 }
 
 .App-link {
