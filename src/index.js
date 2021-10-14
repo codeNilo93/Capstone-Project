@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Header from './components/Header/Header'
 import App from './App';
+import Profile from './components/Profile/Profile'
 import Form from './components/Form/Form'
 import Footer from './components/Footer/Footer'
 import reportWebVitals from './reportWebVitals';
@@ -12,7 +13,7 @@ ReactDOM.render(
     <Header />
     <App />
     <Form />
-    <App />
+    <Profile />
     <Footer />
   </React.StrictMode>,
   document.getElementById('root')

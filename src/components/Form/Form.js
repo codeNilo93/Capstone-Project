@@ -6,27 +6,27 @@ function Form() {
 
     <FormDiv>
     <label>Title</label><br/>
-    <input type="text" id="fname" name="fname" value="John"/><br/>
+    <input type="text" id="fname" name="fname" value=""/><br/>
     </FormDiv>
 
     <FormDiv>
     <label>Description</label><br/>
-    <input type="text" id="lname" name="lname" value="Doe"/><br/>
+    <input type="text" id="lname" name="lname" value=""/><br/>
     </FormDiv>
 
     <FormDiv>
     <label>Coordinates</label><br/>
-    <input type="text" id="lname" name="lname" value="Doe"/><br/>
+    <input type="text" id="lname" name="lname" value=""/><br/>
     </FormDiv>
 
     <FormDiv>
     <label>Address</label><br/>
-    <input type="text" id="lname" name="lname" value="Doe"/><br/>
+    <input type="text" id="lname" name="lname" value=""/><br/>
     </FormDiv>
 
     <FormDiv>
     <label>Price</label><br/>
-    <input type="text" id="lname" name="lname" value="Doe"/><br/>
+    <input type="text" id="lname" name="lname" value=""/><br/>
     </FormDiv>
 
     <FormSubmit type="submit" value="Submit"/>

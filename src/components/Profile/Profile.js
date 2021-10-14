@@ -1,17 +1,18 @@
-
 import styled from 'styled-components';
-import './App.css';
+import './Profile.css';
 
-function App() {
+function Profile() {
   return (
     <div className="background__image">
     <div className="App">
       <header>
         <StyledText>
-          Home Page
+          Profile Page
         </StyledText>
       </header>
     </div>
+    <p>lol</p>
+    <p>lol</p>
     </div>
   );
 }
@@ -20,4 +21,4 @@ const StyledText = styled.p`
 color: white;
 `
 
-export default App;
+export default Profile;
