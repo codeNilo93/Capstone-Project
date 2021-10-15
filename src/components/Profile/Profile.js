@@ -4,7 +4,7 @@ import './Profile.css';
 function Profile() {
   return (
     <div className="background__image">
-    <div className="App">
+    <div className="Profile">
       <header>
         <StyledText>
           Profile Page

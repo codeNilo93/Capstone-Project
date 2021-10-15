@@ -1,6 +1,6 @@
-.Profile {
+.Login {
     text-align: center;
-    padding-top:300px;
+    padding-top:350px;
   }
   
   .App-logo {
@@ -14,12 +14,13 @@
     }
   }
   
-  .background__image{
+  .login__background__image{
     padding-top: 120px;
-    background-image: url('/src/assets/images/mainBack.jpg');
+    background-image: url('/src/assets/images/login_hiking.jpeg');
     background-size: cover;
     background-position:  center;
     Background-repeat: no-repeat;
+    height: auto;
   }
   
   .App-link {
