@@ -37,7 +37,7 @@ const StyledLoginMenu = styled.div`
   opacity: 95%;
   text-align: center;
   background-color: white;
-  width: 50%;
+  width: 25%;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   padding-bottom:10px;
