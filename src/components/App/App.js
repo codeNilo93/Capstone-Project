@@ -1,5 +1,9 @@
 import styled from 'styled-components/macro';
-import Header from '../Header';
+import Header from '../Header/Header';
+import Login from '../Login/Login';
+import Home from '../Home/Home';
+import Form from '../Form/Form';
+import Footer from '../Footer/Footer'
 
 function App() {
   return (

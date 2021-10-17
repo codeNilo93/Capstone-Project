@@ -12,7 +12,7 @@ function Login() {
               <input type="text" id="lname" name="lname" value="" />
               <label>Password</label>
               <input type="password" id="password" name="password" value="" />
-              <FormSubmit type="submit" value="Submit"/>
+              <button type="button">Submit</button>
             </StyledText>
           </LoginMenu>
         </section>

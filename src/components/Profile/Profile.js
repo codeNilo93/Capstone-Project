@@ -2,7 +2,7 @@ import styled from 'styled-components/macro';
 
 function Profile() {
   return (
-    <StyledBackground>
+    <section>
     <ProfileText>
         <StyledText>
           Profile Page
@@ -10,7 +10,7 @@ function Profile() {
     </ProfileText>
     <p>lol</p>
     <p>lol</p>
-    </StyledBackground>
+    </section>
   );
 }
 
