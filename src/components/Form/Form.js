@@ -41,7 +41,7 @@ function Form() {
 const FormDiv = styled.div`
 padding: 0.5rem 0;
 `
-const FormSubmit = styled.input`
+const FormSubmit = styled.button`
 padding: 0.5rem 0;
 `
 export default Form

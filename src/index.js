@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import Header from './components/Header/Header'
-import App from './App';
+import App from './components/App/App';
 import Login from './components/Login/Login'
 import Profile from './components/Profile/Profile'
 import Form from './components/Form/Form'

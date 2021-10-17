@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import "./Login.css";
 
 function Login() {
   return (
-    <div className="login__background__image">
-      <div className="Login">
+    <StyledBackground>
+      <StyledFormat>
         <section>
           <StyledLoginMenu>
             <StyledText>
@@ -23,10 +22,27 @@ function Login() {
             </StyledText>
           </StyledLoginMenu>
         </section>
-      </div>
-    </div>
+      </StyledFormat>
+    </StyledBackground>
   );
 }
+
+const StyledBackground = styled.div`
+padding-top: 120px;
+background-image: linear-gradient(to right top, #ffc75f, #ffbd61, #ffb363, #ffaa67, #ffa16b, #ff9a6e, #ff9372, #ff8c76, #ff847b, #ff7d81, #ff7689, #ff6f91);
+background-size: cover;
+background-position:  center;
+Background-repeat: no-repeat;
+height: auto;
+`;
+
+const StyledFormat = styled.div`
+text-align: center;
+padding-top:350px;
+width: auto;
+`;
+
+
 
 const StyledText = styled.p`
     padding-top: 10px;
@@ -44,7 +60,7 @@ const StyledLoginMenu = styled.div`
 `;
 const FormSubmit = styled.input`
 padding: 0.5rem 0;
-
 `;
+
 
 export default Login;
