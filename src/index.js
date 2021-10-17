@@ -7,15 +7,12 @@ import Profile from './components/Profile/Profile'
 import Form from './components/Form/Form'
 import Footer from './components/Footer/Footer'
 import reportWebVitals from './reportWebVitals';
+import GlobalStyles from './GlobalStyles';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
-    <Login />
+    <GlobalStyles />
     <App />
-    <Form />
-    <Profile />
-    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,19 +1,19 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro';
 
 
 function Header() {
   return (
-    <StyledHeader>
+    <HeaderContainer>
       <HeaderElements>
       <h1>Adventure'n'Chill</h1>
-      <StyledHeaderButton>Profile</StyledHeaderButton>
-      <StyledHeaderButton>logout</StyledHeaderButton>
+      <HeaderButton>Profile</HeaderButton>
+      <HeaderButton>logout</HeaderButton>
       </HeaderElements>
-    </StyledHeader>
+    </HeaderContainer>
   )
 }
 
-const StyledHeader = styled.header`
+const HeaderContainer = styled.header`
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 background-color: #FF9671;
 position: fixed;
@@ -32,7 +32,7 @@ grid-template-columns: auto 100px 100px;
 align-items: center;
 justify-content: center;
 `
-const StyledHeaderButton = styled.button`
+const HeaderButton = styled.button`
 background: transparent;
 border-radius: 3px;
 border: 2px solid white;
