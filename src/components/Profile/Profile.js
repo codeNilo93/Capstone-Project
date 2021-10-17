@@ -4,11 +4,9 @@ function Profile() {
   return (
     <StyledBackground>
     <ProfileText>
-      <header>
         <StyledText>
           Profile Page
         </StyledText>
-      </header>
     </ProfileText>
     <p>lol</p>
     <p>lol</p>
@@ -24,10 +22,6 @@ const ProfileText = styled.div`
 text-align: center;
 padding-top:300px;
 `;
-
-const StyledBackground = styled.section`
-`
-
 
 
 export default Profile;

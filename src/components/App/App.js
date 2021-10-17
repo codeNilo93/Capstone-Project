@@ -1,10 +1,16 @@
 import styled from 'styled-components/macro';
+import Header from '../Header';
 
 function App() {
   return (
-    <AppStyledText>
- AppDiv
-    </AppStyledText>
+    <wrapper>
+    <Header />
+    <Login />
+    <Home />
+    <Form />
+    <Footer />
+    </wrapper>
+
   );
 }
 

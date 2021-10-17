@@ -5,22 +5,16 @@ function Login() {
     <StyledBackground>
       <StyledFormat>
         <section>
-          <StyledLoginMenu>
+          <LoginMenu>
             <StyledText>
               <h3>Welcome! Please Log In</h3>
-
               <label>User Name</label>
-              <br />
               <input type="text" id="lname" name="lname" value="" />
-              <br />
-
               <label>Password</label>
-              <br />
-              <input type="text" id="lname" name="lname" value="" />
-              <br />
+              <input type="password" id="password" name="password" value="" />
               <FormSubmit type="submit" value="Submit"/>
             </StyledText>
-          </StyledLoginMenu>
+          </LoginMenu>
         </section>
       </StyledFormat>
     </StyledBackground>
@@ -33,10 +27,9 @@ background-image: linear-gradient(to right top, #ffc75f, #ffbd61, #ffb363, #ffaa
 background-size: cover;
 background-position:  center;
 Background-repeat: no-repeat;
-height: auto;
 `;
 
-const StyledFormat = styled.div`
+const StyledFormat = styled.section`
 text-align: center;
 padding-top:350px;
 width: auto;
@@ -49,7 +42,7 @@ const StyledText = styled.p`
   color: black;
 `;
 
-const StyledLoginMenu = styled.div`
+const LoginMenu = styled.form`
   opacity: 95%;
   text-align: center;
   background-color: white;
@@ -58,7 +51,7 @@ const StyledLoginMenu = styled.div`
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   padding-bottom:10px;
 `;
-const FormSubmit = styled.input`
+const LoginSubmit = styled.input`
 padding: 0.5rem 0;
 `;
 

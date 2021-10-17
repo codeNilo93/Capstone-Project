@@ -1,16 +1,18 @@
 import styled from 'styled-components/macro';
 
-function App() {
+function Home() {
   return (
-    <AppStyledText>
+    <StyledBackground>
+    <HomeStyledText>
  AppDiv
-    </AppStyledText>
+    </HomeStyledText>
+    </StyledBackground>
   );
 }
 
-export default App;
+export default Home;
 
-const AppStyledText = styled.p`
+const HomeStyledText = styled.p`
 color: white;
 text-align: center;
 padding-top:300px;
