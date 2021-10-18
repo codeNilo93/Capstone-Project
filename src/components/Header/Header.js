@@ -1,14 +1,49 @@
-import './Header.css'
+import styled from 'styled-components'
+
 
 function Header() {
   return (
-    <div className="header">
-      <section className="header__grid-container">
-      <h2 className="header__grid-container">Adventure'n'Chill</h2>
-      <p className="header__grid-container">logout</p>
-      </section>
-    </div>
+    <StyledHeader>
+      <HeaderElements>
+      <h1>Adventure'n'Chill</h1>
+      <StyledHeaderButton>Profile</StyledHeaderButton>
+      <StyledHeaderButton>logout</StyledHeaderButton>
+      </HeaderElements>
+    </StyledHeader>
   )
 }
+
+const StyledHeader = styled.header`
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+background-color: #FF9671;
+position: fixed;
+z-index: 2;
+width: 100%;
+height: 50px;
+top: 0;
+box-shadow: 0px 0px 5px 5px rgba(0, 0, 50, 0.75);
+-webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 50, 0.75);
+-moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 50, 0.75);
+`;
+
+const HeaderElements = styled.section`
+display: grid;
+grid-template-columns: auto 100px 100px;
+align-items: center;
+justify-content: center;
+`
+const StyledHeaderButton = styled.button`
+background: transparent;
+border-radius: 3px;
+border: 2px solid white;
+color: white;
+margin: 0.5em 1em;
+padding: 0.25em 1em;
+opacity: 0.5;
+&:hover  {
+  opacity: 1.0;
+}
+`
+
 
 export default Header
