@@ -4,11 +4,9 @@ import styled from 'styled-components/macro';
 function Header() {
   return (
     <HeaderContainer>
-      <HeaderElements>
       <h1>Adventure'n'Chill</h1>
       <HeaderButton>Profile</HeaderButton>
       <HeaderButton>logout</HeaderButton>
-      </HeaderElements>
     </HeaderContainer>
   )
 }
@@ -22,16 +20,12 @@ width: 100%;
 height: 50px;
 top: 0;
 box-shadow: 0px 0px 5px 5px rgba(0, 0, 50, 0.75);
--webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 50, 0.75);
--moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 50, 0.75);
-`;
-
-const HeaderElements = styled.section`
 display: grid;
 grid-template-columns: auto 100px 100px;
 align-items: center;
 justify-content: center;
-`
+`;
+
 const HeaderButton = styled.button`
 background: transparent;
 border-radius: 3px;

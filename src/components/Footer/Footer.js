@@ -2,7 +2,7 @@ import styled from 'styled-components/macro';
 
 function Footer () {
     return (
-        <footer>
+        <FooterContainer>
             <FooterContainer>
                 <FooterButton>
                 Home
@@ -19,20 +19,18 @@ function Footer () {
 
                 </FooterButton>
             </FooterContainer>
-        </footer>
+            </FooterContainer>
     )
 }
 
 const FooterContainer = styled.nav`
 position: fixed;
-bottom: 0px;
+bottom: 0;
 width: 100%;
 height: 8%;
 display: flex;
 z-index: 2;
 box-shadow: 0px 0px 5px 5px rgba(0, 0, 50, 0.75);
--webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 50, 0.75);
--moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 50.75);
 `;
 
 const FooterButton = styled.button`

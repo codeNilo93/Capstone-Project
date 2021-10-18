@@ -2,26 +2,22 @@ import styled from 'styled-components/macro';
 
 function Profile() {
   return (
-    <section>
-    <ProfileText>
-        <StyledText>
+    <Wrapper>
+        <h2>
           Profile Page
-        </StyledText>
-    </ProfileText>
+        </h2>
     <p>lol</p>
     <p>lol</p>
-    </section>
+    </Wrapper>
   );
 }
 
-const StyledText = styled.p`
-color: white;
-`;
-
-const ProfileText = styled.div`
+const Wrapper = styled.section`
+border: 1px solid red;
 text-align: center;
-padding-top:300px;
-`;
+color: white;
+`
 
+ 
 
 export default Profile;

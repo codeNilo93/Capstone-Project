@@ -2,43 +2,49 @@ import styled from 'styled-components/macro';
 
 function Login() {
   return (
-      <StyledFormat>
+    <Wrapper>
           <LoginMenu>
-            <StyledText>
-              <h3>Welcome! Please Log In</h3>
+              <StyledFormat>Welcome! Please Log In</StyledFormat>
               <label>User Name</label>
               <input type="text" id="lname" name="lname" value="" />
               <label>Password</label>
               <input type="password" id="password" name="password" value="" />
-              <button type="button">Submit</button>
-            </StyledText>
+              <LoginButton type="button">Submit</LoginButton>
           </LoginMenu>
-      </StyledFormat>
+      </Wrapper>
   );
 }
 
 
-
-const StyledFormat = styled.section`
+const Wrapper = styled.section`
+border: 1px solid red;
 text-align: center;
-padding-top:350px;
+padding-top:200px;
 width: auto;
 `;
 
-const StyledText = styled.p`
+const LoginMenu = styled.form`
+  padding: 20px;
+  opacity: 95%;
+  text-align: center;
+  background-color: white;
+  width: 50%;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  padding-bottom:10px;
+  display: flex;
+  flex-flow: column wrap;
+`;
+
+const StyledFormat = styled.p`
     padding-top: 10px;
   color: black;
 `;
 
-const LoginMenu = styled.form`
-  opacity: 95%;
-  text-align: center;
-  background-color: white;
-  width: 25%;
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  padding-bottom:10px;
-`;
+const LoginButton =styled.button`
+margin-top: 10px;
+`
+
 
 
 export default Login;
