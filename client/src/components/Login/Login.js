@@ -4,17 +4,16 @@ function Login() {
   return (
     <Wrapper>
           <LoginMenu>
-              <StyledFormat>Welcome! Please Log In</StyledFormat>
-              <label>User Name</label>
-              <input type="text" id="lname" name="lname" value="" />
-              <label>Password</label>
-              <input type="password" id="password" name="password" value="" />
-              <LoginButton type="button">Submit</LoginButton>
+              <LoginFormat>Welcome! Please log in</LoginFormat>
+              <InputField type="text" placeholder="Username" />
+              <InputField type="text" placeholder="Password" />
+              <LoginButton type="submit">Log in</LoginButton>
           </LoginMenu>
       </Wrapper>
   );
 }
 
+export default Login;
 
 const Wrapper = styled.section`
 border: 1px solid red;
@@ -24,6 +23,7 @@ width: auto;
 `;
 
 const LoginMenu = styled.form`
+  margin: auto;
   padding: 20px;
   opacity: 95%;
   text-align: center;
@@ -36,15 +36,29 @@ const LoginMenu = styled.form`
   flex-flow: column wrap;
 `;
 
-const StyledFormat = styled.p`
+const LoginFormat = styled.p`
     padding-top: 10px;
   color: black;
 `;
 
 const LoginButton =styled.button`
 margin-top: 10px;
+width: 37.5%;
+box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+rgba(0, 0, 0, 0.22) 0px 15px 12px;
+padding: 10px;
 `
 
+const InputField = styled.input `
+box-sizing: border-box;
+border: none;
+width: 75%;
+height: auto;
+background-color: BCCEA1;
+border-radius: 20px;
+margin-bottom: 20px;
+padding: 20px 30px;
+box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+rgba(0, 0, 0, 0.22) 0px 15px 12px;
+`;
 
-
-export default Login;

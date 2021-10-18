@@ -22,5 +22,5 @@ function App() {
 export default App;
 
 const Wrapper = styled.section`
-  border: 1px solid red;
+  border: 1px solid red; Testing purposes
 `;

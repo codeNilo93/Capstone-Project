@@ -12,12 +12,10 @@ function Profile() {
   );
 }
 
+export default Profile;
+
 const Wrapper = styled.section`
 border: 1px solid red;
 text-align: center;
 color: white;
 `
-
- 
-
-export default Profile;

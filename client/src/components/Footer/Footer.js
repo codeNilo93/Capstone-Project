@@ -2,17 +2,19 @@ import styled from "styled-components/macro";
 
 function Footer() {
   return (
-    <FooterContainer>
+    <Wrapper>
       <FooterButton>Home</FooterButton>
 
       <FooterButton>Create</FooterButton>
 
       <FooterButton>AdventurePlan</FooterButton>
-    </FooterContainer>
+    </Wrapper>
   );
 }
 
-const FooterContainer = styled.nav`
+export default Footer;
+
+const Wrapper = styled.nav`
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -34,5 +36,3 @@ const FooterButton = styled.button`
     box-shadow: 10px 10px 10px 4px grey;
   }
 `;
-
-export default Footer;

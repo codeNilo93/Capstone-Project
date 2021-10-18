@@ -2,15 +2,17 @@ import styled from "styled-components/macro";
 
 function Header() {
   return (
-    <HeaderContainer>
+    <Wrapper>
       <h1>Adventure'n'Chill</h1>
       <HeaderButton>Profile</HeaderButton>
       <HeaderButton>logout</HeaderButton>
-    </HeaderContainer>
+    </Wrapper>
   );
 }
 
-const HeaderContainer = styled.header`
+export default Header;
+
+const Wrapper = styled.header`
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   background-color: #ff9671;
   position: fixed;
@@ -37,5 +39,3 @@ const HeaderButton = styled.button`
     opacity: 1;
   }
 `;
-
-export default Header;

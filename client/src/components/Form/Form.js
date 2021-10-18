@@ -4,27 +4,17 @@ function Form() {
   return (
     <Wrapper>
       <FormMenu>
-        <label>Title</label>
-        <br />
-        <input type="text" id="fname" name="fname" />
+      <InputField type="text" placeholder="Title" />
 
-        <label>Description</label>
-        <br />
-        <input type="text" id="description" name="description" />
+      <InputField type="text" placeholder="Description" />
 
-        <label>Coordinates</label>
-        <br />
-        <input type="text" id="coordinates" name="coordinates" />
+      <InputField type="text" placeholder="Coordinates" />
 
-        <label>Address</label>
-        <br />
-        <input type="text" id="address" name="address" />
+      <InputField type="text" placeholder="Address" />
 
-        <label>Price</label>
-        <br />
-        <input type="text" id="price" name="price" />
+      <InputField type="text" placeholder="Price" />
 
-        <button type="button">Click Me!</button>
+      <SubmitButton type="submit">Submit</SubmitButton>
       </FormMenu>
     </Wrapper>
   );
@@ -43,9 +33,31 @@ const FormMenu = styled.section`
   padding: 20px;
   background-color: white;
   display: flex;
+  text-align: center;
   flex-flow: column wrap;
   border: 2px solid white;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 `;
+
+const InputField = styled.input `
+    box-sizing: border-box;
+    border: none;
+    width: 75%;
+    height: auto;
+    background-color: BCCEA1;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 20px 30px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+`;
+
+const SubmitButton =styled.button`
+margin-top: 10px;
+width: 37.5%;
+box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+rgba(0, 0, 0, 0.22) 0px 15px 12px;
+padding: 10px;
+`
