@@ -15,7 +15,15 @@ function Profile() {
 export default Profile;
 
 const Wrapper = styled.section`
+height: auto;
 border: 1px solid red;
 text-align: center;
-color: white;
+margin: auto;
+padding-top:100px;
+padding-bottom: 300px;
+width: auto;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+
 `

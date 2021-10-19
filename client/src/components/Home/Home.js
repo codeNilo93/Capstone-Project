@@ -4,8 +4,9 @@ function Home() {
   return (
     <Wrapper>
       <HomeTitle>AppDiv</HomeTitle>
-      <HomeMenu>Placeholder</HomeMenu>
-      <HomeMenu>Placeholder</HomeMenu>
+      <HomeMenu>MapInterface</HomeMenu>
+      <HomeMenu>CardInformation</HomeMenu>
+      <HomeMenu>CardScroll</HomeMenu>
     </Wrapper>
   );
 }
@@ -13,13 +14,17 @@ function Home() {
 export default Home;
 
 const Wrapper = styled.section`
-  
-  color: white;
-  padding-top: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  border: 2px solid red;
+height: auto;
+border: 1px solid red;
+text-align: center;
+margin: auto;
+padding-top: 100px;
+padding-bottom: 100%;
+width: auto;
+display: flex;
+flex-flow: column wrap;
+justify-content: space-between;
+margin: 50px;
 `;
 
 const HomeTitle = styled.h1`
@@ -34,3 +39,4 @@ const HomeMenu = styled.section`
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 `;
+
