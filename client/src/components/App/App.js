@@ -14,7 +14,7 @@ function App() {
     <Router>
       <Wrapper>
         <Header />
-        <Route path="/">
+        <Route path="/login">
           <Login />
         </Route>
         <Route path="/home">
