@@ -1,3 +1,6 @@
+import { Route } from "react-router-dom";
+import { BrowserRouter as Router } from 'react-router-dom'
+
 import styled from "styled-components/macro";
 import Header from "../Header/Header";
 import Login from "../Login/Login";
@@ -8,14 +11,24 @@ import Profile from "../Profile/Profile";
 
 function App() {
   return (
-    <Wrapper>
-      <Header />
-      <Login />
-      <Home />
-      <Form />
-      <Profile />
-      <Footer />
-    </Wrapper>
+    <Router>
+      <Wrapper>
+        <Header />
+        <Route path="/">
+          <Login />
+        </Route>
+        <Route path="/home">
+          <Home />
+        </Route>
+        <Route path="/form">
+          <Form />
+        </Route>
+        <Route path="/profile">
+          <Profile />
+        </Route>
+        <Footer />
+      </Wrapper>
+    </Router>
   );
 }
 
