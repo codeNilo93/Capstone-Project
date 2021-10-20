@@ -1,11 +1,13 @@
 import styled from "styled-components/macro";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <Wrapper>
       <h1>Adventure'n'Chill</h1>
-      <HeaderButton>Profile</HeaderButton>
-      <HeaderButton>logout</HeaderButton>
+        <StyledLink to="/profile">Profile</StyledLink>
+
+        <StyledLink to="/">Logout</StyledLink>
     </Wrapper>
   );
 }
@@ -27,7 +29,8 @@ const Wrapper = styled.header`
   justify-content: center;
 `;
 
-const HeaderButton = styled.button`
+const StyledLink = styled(Link)`
+  text-decoration: none;
   background: transparent;
   border-radius: 3px;
   border: 2px solid white;
