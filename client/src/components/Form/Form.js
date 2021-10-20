@@ -23,17 +23,18 @@ function Form() {
 export default Form;
 
 const Wrapper = styled.section`
-  border: 1px solid red;
-  text-align: center;
-  padding-top: 200px;
-  width: auto;
+height: auto;
+border: 1px solid red;
+margin: auto;
+padding-top: 100px;
+padding-bottom: 250px;
+width: auto;
 `;
 
 const FormMenu = styled.section`
   padding: 20px;
   background-color: white;
   display: flex;
-  text-align: center;
   flex-flow: column wrap;
   border: 2px solid white;
   border-radius: 25px;
@@ -42,7 +43,6 @@ const FormMenu = styled.section`
 `;
 
 const InputField = styled.input `
-    box-sizing: border-box;
     border: none;
     width: 75%;
     height: auto;

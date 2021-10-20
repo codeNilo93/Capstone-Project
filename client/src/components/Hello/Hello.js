@@ -1,11 +1,11 @@
 import styled from 'styled-components/macro';
 import Klammerfisch from '../../assets/images/Klammerfisch.jpg'
 
-function Profile() {
+function Hello() {
   return (
     <Wrapper>
         <h2>
-          Profile Page
+          Hello there, fellow adventurer!
         </h2>
         <ProfileImg src={Klammerfisch} alt="That's me!"/>
     <p>lol</p>
@@ -14,7 +14,7 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default Hello;
 
 const Wrapper = styled.section`
 height: auto;

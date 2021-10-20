@@ -1,18 +1,35 @@
 import styled from "styled-components/macro";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <Wrapper>
-      <FooterButton>Home</FooterButton>
+        <StyledLink to="/home">Home</StyledLink>
 
-      <FooterButton>Create</FooterButton>
+        <StyledLink to="/form">Create</StyledLink>
 
-      <FooterButton>AdventurePlan</FooterButton>
+        <StyledLink to="/adventure">AdventurePlan</StyledLink>
     </Wrapper>
   );
 }
 
 export default Footer;
+
+const StyledLink = styled(Link)`
+text-decoration: none;
+background-color: #ff9671;
+flex: 25%;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+&:hover {
+  border: 2px solid white;
+  box-shadow: 10px 10px 10px 4px grey;
+}
+  }
+`
+
 
 const Wrapper = styled.nav`
   position: fixed;
@@ -25,14 +42,16 @@ const Wrapper = styled.nav`
 `;
 
 const FooterButton = styled.button`
-  background-color: #ff9671;
-  flex: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  &:hover {
-    border: 2px solid white;
-    box-shadow: 10px 10px 10px 4px grey;
+text-decoration: none;
+background-color: #ff9671;
+flex: 25%;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+&:hover {
+  border: 2px solid white;
+  box-shadow: 10px 10px 10px 4px grey;
+}
   }
 `;

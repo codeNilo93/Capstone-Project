@@ -1,5 +1,6 @@
 import styled from 'styled-components/macro';
 
+
 function Login() {
   return (
     <Wrapper>
@@ -16,9 +17,12 @@ function Login() {
 export default Login;
 
 const Wrapper = styled.section`
+height: auto;
 border: 1px solid red;
 text-align: center;
+margin: auto;
 padding-top:200px;
+padding-bottom: 200px;
 width: auto;
 `;
 
@@ -28,7 +32,7 @@ const LoginMenu = styled.form`
   opacity: 95%;
   text-align: center;
   background-color: white;
-  width: 50%;
+  width: 75%;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   padding-bottom:10px;
@@ -43,16 +47,17 @@ const LoginFormat = styled.p`
 
 const LoginButton =styled.button`
 margin-top: 10px;
-width: 37.5%;
+width: auto;
 box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
 rgba(0, 0, 0, 0.22) 0px 15px 12px;
 padding: 10px;
+color: #f2936d;
 `
 
 const InputField = styled.input `
 box-sizing: border-box;
 border: none;
-width: 75%;
+width: auto;
 height: auto;
 background-color: BCCEA1;
 border-radius: 20px;
