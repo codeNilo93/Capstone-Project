@@ -1,21 +1,21 @@
-import styled from "styled-components/macro";
-import { Link } from "react-router-dom";
+import styled from 'styled-components/macro'
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
     <Wrapper>
       <h1>Adventure'n'Chill</h1>
-        <StyledLink to="/profile">Profile</StyledLink>
+      <StyledLink to="/profile">Profile</StyledLink>
 
-        <StyledLink to="/">Logout</StyledLink>
+      <StyledLink to="/">Logout</StyledLink>
     </Wrapper>
-  );
+  )
 }
 
-export default Header;
+export default Header
 
 const Wrapper = styled.header`
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color: #ff9671;
   position: fixed;
   z-index: 2;
@@ -27,7 +27,7 @@ const Wrapper = styled.header`
   grid-template-columns: auto 100px 100px;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -41,4 +41,4 @@ const StyledLink = styled(Link)`
   &:hover {
     opacity: 1;
   }
-`;
+`
