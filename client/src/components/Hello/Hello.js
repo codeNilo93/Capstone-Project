@@ -1,9 +1,13 @@
 import styled from 'styled-components/macro';
+import Klammerfisch from '../../assets/images/Klammerfisch.jpg'
 
 function Hello() {
   return (
     <Wrapper>
-<img src='https://files.slack.com/files-pri/TTHG21AH3-F02F4VD3WRL/klammerfisch.jpg'/>
+        <h2>
+          Hello there, fellow adventurer!
+        </h2>
+        <ProfileImg src={Klammerfisch} alt="That's me!"/>
     <p>lol</p>
     <p>lol</p>
     </Wrapper>
@@ -23,5 +27,9 @@ width: auto;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
+`;
 
+const ProfileImg = styled.img`
+width: 10%;
+margin: auto;
 `
