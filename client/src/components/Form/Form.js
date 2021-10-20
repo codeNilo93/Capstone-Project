@@ -26,8 +26,8 @@ const Wrapper = styled.section`
 height: auto;
 border: 1px solid red;
 margin: auto;
-padding-top:70px;
-padding-bottom: 70px;
+padding-top: 100px;
+padding-bottom: 250px;
 width: auto;
 `;
 

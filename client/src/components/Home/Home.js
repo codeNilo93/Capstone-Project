@@ -19,7 +19,7 @@ border: 1px solid red;
 text-align: center;
 margin: auto;
 padding-top: 100px;
-padding-bottom: 100%;
+padding-bottom: 250px;
 width: auto;
 display: flex;
 flex-flow: column wrap;

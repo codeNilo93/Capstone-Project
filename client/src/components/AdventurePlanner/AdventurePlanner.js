@@ -19,7 +19,7 @@ height: auto;
 border: 1px solid red;
 text-align: center;
 margin: auto;
-padding-top:100px;
+padding-top:200px;
 padding-bottom: 300px;
 width: auto;
 display: flex;
