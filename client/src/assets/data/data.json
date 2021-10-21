@@ -1,0 +1,70 @@
+[
+    {
+      "title": "Dresdner Heide - Sandgrube.",
+      "description": "Beschauliche Sanddünen inmitten eines Waldes nordöstlich von Dresden",
+      "address": "",
+      "coordinates": {
+        "latitude":"51.090623169567145",
+        "longtitude": "13.77920843776576"
+      }, 
+      "price": "0",
+      "image": "https://lh5.googleusercontent.com/p/AF1QipOD5VAAk0QiUZXOh5Xh9YxVmz0B3GyeR_p3paLF=w408-h306-k-no",
+      "category": "Chill"
+    },
+
+    {
+      "title": "TeamEscape Dresden",
+      "description": "Escape - Room inmitten der Dresdner Neustadt",
+      "address": "",
+      "coordinates": {
+        "latitude":"51.08027496288259",
+        "longtitude": "13.768656640433104"
+      },
+      "price": "0",
+      "image": "https://lh5.googleusercontent.com/p/AF1QipOD5VAAk0QiUZXOh5Xh9YxVmz0B3GyeR_p3paLF=w408-h306-k-no",
+      "category": "Thrill"
+    },
+
+    {
+      "title": "AdventureRooms Dresden",
+      "description": "Escape - Room im legendären Dresdner",
+      "address": "",
+      "coordinates": {
+        "latitude":"51.06418428170392",
+        "longtitude": "13.747564635576671"
+      },
+      "price": "0",
+      "image": "https://lh5.googleusercontent.com/p/AF1QipOD5VAAk0QiUZXOh5Xh9YxVmz0B3GyeR_p3paLF=w408-h306-k-no",
+      "category": "Thrill"
+    },
+
+    {
+      "title": "Adventureland - Paintball und Lasertag",
+      "description": "Zentrum für Lasertag & Paintball",
+      "address": "",
+      "coordinates": {
+        "latitude":"51.04674769082112",
+        "longtitude": "13.715557009383671"
+      },
+      "price": "0",
+      "image": "https://lh5.googleusercontent.com/p/AF1QipOD5VAAk0QiUZXOh5Xh9YxVmz0B3GyeR_p3paLF=w408-h306-k-no",
+      "category": "Action"
+    },
+
+    {
+      "title": "Stausee Dresdner Heide",
+      "description": "Beschaulicher Ort zum Entspannen & Campen",
+      "address": "",
+      "coordinates": {
+        "latitude":"51.0893299979203",
+        "longtitude": "13.869277794139645"
+      },
+      "price": "0",
+      "image": "https://lh5.googleusercontent.com/p/AF1QipOD5VAAk0QiUZXOh5Xh9YxVmz0B3GyeR_p3paLF=w408-h306-k-no",
+      "category": "Chill"
+    }
+
+
+
+    
+  ]

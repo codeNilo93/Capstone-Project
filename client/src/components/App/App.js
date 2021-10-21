@@ -4,13 +4,14 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import Header from '../Header/Header'
 import Hello from '../Hello/Hello'
 import Login from '../Login/Login'
-import Home from '../Home/Home'
+import CardList from "../CardList/CardList"
 import Form from '../Form/Form'
 import AdventurePlanner from '../AdventurePlanner/AdventurePlanner'
 import Footer from '../Footer/Footer'
 import Profile from '../Profile/Profile'
 
-function App() {
+
+function App({ data }) {
   return (
     <Router>
       <Header />
@@ -22,7 +23,7 @@ function App() {
           <Login />
         </Route>
         <Route path="/home">
-          <Home />
+          <CardList locations={data} />
         </Route>
         <Route path="/form">
           <Form />

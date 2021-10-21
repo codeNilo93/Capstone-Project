@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom'
 import App from './components/App/App'
 import reportWebVitals from './reportWebVitals'
 import GlobalStyles from './GlobalStyles'
+import data from './assets/data/data.json'
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyles />
-    <App />
+    <App data={data}/>
   </React.StrictMode>,
   document.getElementById('root')
 )
