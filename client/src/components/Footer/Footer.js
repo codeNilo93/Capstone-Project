@@ -38,17 +38,3 @@ const Wrapper = styled.nav`
   z-index: 2;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 50, 0.75);
 `
-
-const FooterButton = styled.button`
-  text-decoration: none;
-  background-color: #ff9671;
-  flex: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  &:hover {
-    border: 2px solid white;
-    box-shadow: 10px 10px 10px 4px grey;
-  }
-`

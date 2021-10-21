@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
 
@@ -18,7 +18,6 @@ body {
       sans-serif;
 
 }
-  
-`;
+`
 
-export default GlobalStyles;
+export default GlobalStyles
