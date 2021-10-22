@@ -16,7 +16,8 @@ function Card (
         <StyledImage src={image} alt="that looks nice!" />
         <StyledDescription>
         <h3>{title}</h3>
-        <p>Show Me more</p>
+
+        <p>{description}</p>
         </StyledDescription>
         </Wrapper>
     )
