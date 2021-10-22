@@ -6,7 +6,7 @@ function Footer() {
     <Wrapper>
       <StyledLink to="/home">Home</StyledLink>
 
-      <StyledLink to="/form">Create</StyledLink>
+      <StyledLink to="/form">Create Location</StyledLink>
 
       <StyledLink to="/adventure">AdventureMap</StyledLink>
     </Wrapper>
@@ -16,10 +16,9 @@ function Footer() {
 export default Footer
 
 const StyledLink = styled(Link)`
-border: 2px solid white;
 color: black;
   text-decoration: none;
-  background-color: #ff9671;
+  background-color: #FF6F91;
   flex: 25%;
   display: flex;
   justify-content: center;

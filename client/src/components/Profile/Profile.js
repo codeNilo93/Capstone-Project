@@ -6,8 +6,7 @@ function Profile() {
     <Wrapper>
       <h2>Profile Page</h2>
       <ProfileImg src={Klammerfisch} alt="That's me!" />
-      <p>lol</p>
-      <p>lol</p>
+      <p>test</p>
     </Wrapper>
   )
 }
@@ -15,12 +14,9 @@ function Profile() {
 export default Profile
 
 const Wrapper = styled.section`
-  height: auto;
   border: 1px solid red;
   text-align: center;
   margin: auto;
-  padding-top: 100px;
-  padding-bottom: 300px;
   width: auto;
   display: flex;
   flex-direction: column;

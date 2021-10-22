@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro'
-import { useState } from 'react'
 import { nanoid } from 'nanoid'
 
 function Form({ onCreateNewLocation }) {
@@ -13,7 +12,7 @@ function Form({ onCreateNewLocation }) {
         description,
         coordinates,
         address,
-        price,
+        category,
     } = form.elements
 
     onCreateNewLocation({
@@ -22,13 +21,12 @@ function Form({ onCreateNewLocation }) {
         description: description.value,
         coordinates: coordinates.value,
         address: address.value,
-        price: price.value,
+        category: category.value,
       })
       form.reset()
     
 
   }
-
   return (
     <Wrapper>
       <FormMenu onSubmit={handleSubmit}>
@@ -40,9 +38,9 @@ function Form({ onCreateNewLocation }) {
 
         <label><InputField name="address" type="text" placeholder="Address" /></label>
 
-        <label><InputField name="price" type="text" placeholder="Price" /></label>
+        <label><InputField name="category" type="text" placeholder="Category" /></label>
 
-        <SubmitButton type="submit">Submit</SubmitButton>
+        <SubmitButton>Submit</SubmitButton>
       </FormMenu>
     </Wrapper>
   )
@@ -51,24 +49,20 @@ function Form({ onCreateNewLocation }) {
 export default Form
 
 const Wrapper = styled.section`
-  height: auto;
-  pad  border: 1px solid red;
   padding-right: 20px;
   text-align: center;
   padding-top: 60px;
   width: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 100px;ding-top: 100px;
-  padding-bottom: 250px;
+  gap: 100px;
   width: auto;
 `
 
 const FormMenu = styled.form`
+background-color: #D3E9F3;
   padding: 20px;
   background-color: white;
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   border: 2px solid white;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
