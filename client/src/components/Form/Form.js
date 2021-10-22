@@ -2,33 +2,45 @@ import styled from 'styled-components/macro'
 import { useState } from 'react'
 import { nanoid } from 'nanoid'
 
-function Form( {locations, setlocations} ) {
+function Form({ onCreateNewLocation }) {
 
 
-  function createLocation({ title, description, image}) {
-    const newLocation = [
-      {
+  function handleSubmit(event) {
+    event.preventDefault()
+    const form = event.target
+    const {
+        title,
+        description,
+        coordinates,
+        address,
+        price,
+    } = form.elements
+
+    onCreateNewLocation({
         id: nanoid(),
-        title: title,
-        description: description,
-        image: image,
-      }
-    ]
+        title: title.value,
+        description: description.value,
+        coordinates: coordinates.value,
+        address: address.value,
+        price: price.value,
+      })
+      form.reset()
+    
 
   }
 
   return (
     <Wrapper>
-      <FormMenu>
-        <InputField type="text" placeholder="Title" />
+      <FormMenu onSubmit={handleSubmit}>
+        <label><InputField name="title" type="text" placeholder="Title" /></label>
 
-        <InputField type="text" placeholder="Description" />
+        <label><InputField name="description" type="text" placeholder="Description" /></label>
 
-        <InputField type="text" placeholder="Coordinates" />
+        <label><InputField name="coordinates" type="text" placeholder="Coordinates" /></label>
 
-        <InputField type="text" placeholder="Address" />
+        <label><InputField name="address" type="text" placeholder="Address" /></label>
 
-        <InputField type="text" placeholder="Price" />
+        <label><InputField name="price" type="text" placeholder="Price" /></label>
 
         <SubmitButton type="submit">Submit</SubmitButton>
       </FormMenu>
@@ -40,14 +52,19 @@ export default Form
 
 const Wrapper = styled.section`
   height: auto;
-  border: 1px solid red;
-  margin: auto;
-  padding-top: 100px;
+  pad  border: 1px solid red;
+  padding-right: 20px;
+  text-align: center;
+  padding-top: 60px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;ding-top: 100px;
   padding-bottom: 250px;
   width: auto;
 `
 
-const FormMenu = styled.section`
+const FormMenu = styled.form`
   padding: 20px;
   background-color: white;
   display: flex;

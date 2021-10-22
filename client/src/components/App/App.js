@@ -1,6 +1,7 @@
 import { Route, Switch } from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import styled from 'styled-components'
 
 import Header from '../Header/Header'
 import Hello from '../Hello/Hello'
@@ -16,7 +17,10 @@ import Profile from '../Profile/Profile'
 
 function App({ data }) {
 
+  const [locations, setlocations] = useState(data)
+
   return (
+    <Wrapper>
     <Router>
       <Header />
       <Switch>
@@ -27,10 +31,10 @@ function App({ data }) {
           <Login />
         </Route>
         <Route path="/home">
-          <CardList locations={data} />
+          <CardList locations={locations}/>
         </Route>
         <Route path="/form">
-          <Form />
+          <Form onCreateNewLocation={handleCreateNewLocation} />
         </Route>
         <Route path="/profile">
           <Profile />
@@ -41,7 +45,18 @@ function App({ data }) {
       </Switch>
       <Footer />
     </Router>
+    </Wrapper>
   )
+  function handleCreateNewLocation(newLocation){
+    const newLocations = [newLocation, ...locations]
+    setlocations(newLocations)
+  }
 }
 
 export default App
+
+const Wrapper = styled.section`
+height: 100vh;
+max-width: 600px;
+display: grid;
+`

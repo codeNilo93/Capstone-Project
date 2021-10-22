@@ -8,7 +8,7 @@ function Footer() {
 
       <StyledLink to="/form">Create</StyledLink>
 
-      <StyledLink to="/adventure">AdventurePlan</StyledLink>
+      <StyledLink to="/adventure">AdventureMap</StyledLink>
     </Wrapper>
   )
 }

@@ -6,8 +6,7 @@ function Hello() {
     <Wrapper>
       <h2>Hello there, fellow adventurer!</h2>
       <ProfileImg src={Klammerfisch} alt="That's me!" />
-      <p>lol</p>
-      <p>lol</p>
+
     </Wrapper>
   )
 }

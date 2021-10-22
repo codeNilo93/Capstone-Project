@@ -5,7 +5,6 @@ function AdventureMap() {
     <Wrapper>
       <h2>Wanna see all Adventures at once? Fear not, I'll show you an interactive map soon :P </h2>
       <p>This box shall hold the map</p>
-      <p>lol</p>
     </Wrapper>
   )
 }

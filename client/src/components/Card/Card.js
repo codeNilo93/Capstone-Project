@@ -8,7 +8,9 @@ function Card (
         title,
     description,
     category,}
-) {
+)
+
+{
     return (
         <Wrapper>
         <StyledImage src={image} alt="that looks nice!" />
@@ -23,6 +25,7 @@ function Card (
 export default Card
 
 const Wrapper = styled.li`
+overflow: hidden;
 border-radius: 5px;
 background-color: #fff;
 display: flex;
@@ -50,17 +53,8 @@ h3 {
 
 const StyledImage = styled.img`
 width: 50%;
-flex: 1;
-background-color: #f6f6f6;
 display: flex;
 justify-content: center;
 align-items: center;
 border-radius: 5px 0 0 5px;
-img {
-  box-shadow: var(--box-shadow);
-  -webkit-box-shadow: var(--box-shadow);
-  max-width: 80%;
-  max-height: 130px;
-  margin: 1rem;
-}
 `
