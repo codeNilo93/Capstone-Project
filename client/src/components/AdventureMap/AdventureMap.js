@@ -1,16 +1,16 @@
 import styled from 'styled-components/macro'
 
-function AdventurePlanner() {
+function AdventureMap() {
   return (
     <Wrapper>
-      <h2>Here there be (hopefully well planned) Adventures!</h2>
-      <p>lol</p>
+      <h2>Wanna see all Adventures at once? Fear not, I'll show you an interactive map soon :P </h2>
+      <p>This box shall hold the map</p>
       <p>lol</p>
     </Wrapper>
   )
 }
 
-export default AdventurePlanner
+export default AdventureMap
 
 const Wrapper = styled.section`
   height: auto;

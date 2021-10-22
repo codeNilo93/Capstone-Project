@@ -16,6 +16,8 @@ function Footer() {
 export default Footer
 
 const StyledLink = styled(Link)`
+border: 2px solid white;
+color: black;
   text-decoration: none;
   background-color: #ff9671;
   flex: 25%;
@@ -30,6 +32,7 @@ const StyledLink = styled(Link)`
 `
 
 const Wrapper = styled.nav`
+  border-radius: 5%;
   position: fixed;
   bottom: 0;
   width: 100%;

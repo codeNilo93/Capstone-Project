@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Header() {
   return (
     <Wrapper>
-      <h1>Adventure'n'Chill</h1>
+      <StyledTitle>Adventure'n'Chill</StyledTitle>
       <StyledLink to="/profile">Profile</StyledLink>
 
       <StyledLink to="/">Logout</StyledLink>
@@ -14,7 +14,13 @@ function Header() {
 
 export default Header
 
+const StyledTitle = styled.h1`
+margin: auto;
+padding-left: 10px;
+`
+
 const Wrapper = styled.header`
+  border-radius: 3%;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color: #ff9671;
   position: fixed;
@@ -24,12 +30,13 @@ const Wrapper = styled.header`
   top: 0;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 50, 0.75);
   display: grid;
-  grid-template-columns: auto 100px 100px;
+  grid-template-columns: 200px 100px 100px;
   align-items: center;
   justify-content: center;
 `
 
 const StyledLink = styled(Link)`
+margin: auto;
   text-decoration: none;
   background: transparent;
   border-radius: 3px;

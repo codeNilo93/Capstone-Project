@@ -6,7 +6,7 @@ import Hello from '../Hello/Hello'
 import Login from '../Login/Login'
 import CardList from "../CardList/CardList"
 import Form from '../Form/Form'
-import AdventurePlanner from '../AdventurePlanner/AdventurePlanner'
+import AdventureMap from '../AdventureMap/AdventureMap'
 import Footer from '../Footer/Footer'
 import Profile from '../Profile/Profile'
 
@@ -32,7 +32,7 @@ function App({ data }) {
           <Profile />
         </Route>
         <Route path="/adventure">
-          <AdventurePlanner />
+          <AdventureMap />
         </Route>
       </Switch>
       <Footer />
