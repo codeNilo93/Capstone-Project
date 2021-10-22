@@ -1,6 +1,22 @@
 import styled from 'styled-components/macro'
+import { useState } from 'react'
+import { nanoid } from 'nanoid'
 
-function Form() {
+function Form( {locations, setlocations} ) {
+
+
+  function createLocation({ title, description, image}) {
+    const newLocation = [
+      {
+        id: nanoid(),
+        title: title,
+        description: description,
+        image: image,
+      }
+    ]
+
+  }
+
   return (
     <Wrapper>
       <FormMenu>

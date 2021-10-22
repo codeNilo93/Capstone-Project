@@ -1,5 +1,6 @@
 import { Route, Switch } from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 import Header from '../Header/Header'
 import Hello from '../Hello/Hello'
@@ -11,7 +12,10 @@ import Footer from '../Footer/Footer'
 import Profile from '../Profile/Profile'
 
 
+
+
 function App({ data }) {
+
   return (
     <Router>
       <Header />

@@ -17,7 +17,6 @@ function Card (
         <p>Show Me more</p>
         </StyledDescription>
         </Wrapper>
-
     )
 }
 
