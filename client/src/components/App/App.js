@@ -1,7 +1,7 @@
 import { Route, Switch } from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { useState } from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 import Header from '../Header/Header'
 import Hello from '../Hello/Hello'
@@ -57,7 +57,6 @@ export default App
 
 const Wrapper = styled.section`
 height: 100vh;
-margin: 0 auto;
 display: grid;
 grid-template-rows: auto 4rem;
 grid-template-areas: 'main' 'footer';

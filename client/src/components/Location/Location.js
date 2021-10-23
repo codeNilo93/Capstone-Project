@@ -13,7 +13,7 @@ function Location (
 {
     return (
         <Wrapper>
-        <StyledImage src={image}/>
+        <StyledImage src={image} alt=""/>
         <StyledDescription>
         <h3>{title}</h3>
         <p>{category}</p>

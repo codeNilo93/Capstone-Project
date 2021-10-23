@@ -49,6 +49,7 @@ function Form({ onCreateNewLocation }) {
 export default Form
 
 const Wrapper = styled.section`
+margin: 0;
   padding-right: 20px;
   text-align: center;
   padding-top: 60px;
@@ -73,7 +74,7 @@ const InputField = styled.input`
   border: none;
   width: 75%;
   height: auto;
-  background-color: BCCEA1;
+  background-color: #BCCEA1;
   border-radius: 20px;
   margin-bottom: 20px;
   padding: 20px 30px;
@@ -82,6 +83,7 @@ const InputField = styled.input`
 `
 
 const SubmitButton = styled.button`
+margin: 0;
   margin-top: 10px;
   width: 37.5%;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,

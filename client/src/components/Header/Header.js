@@ -6,8 +6,6 @@ function Header() {
     <Wrapper>
       <HeaderTitle>Adventure'n'Chill</HeaderTitle>
       <StyledLink to="/profile">Profile</StyledLink>
-
-      <StyledLink to="/">Logout</StyledLink>
     </Wrapper>
   )
 }
@@ -16,21 +14,22 @@ export default Header
 
 const HeaderTitle= styled.h1`
 margin: auto;
-padding-left: 10px;
+padding-left: 40px;
 `
 
 const Wrapper = styled.header`
-  border-radius: 3%;
+width: 100%;  
+border-bottom-right-radius: 50px 20px;
+border-bottom-left-radius: 50px  20px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color: #FF6F91;
   position: fixed;
   z-index: 2;
-  width: 100%;
-  height: 50px;
   top: 0;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 50, 0.75);
   display: grid;
-  grid-template-columns: 200px 100px 100px;
+  grid-column-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
 `
