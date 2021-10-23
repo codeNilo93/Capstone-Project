@@ -1,13 +1,13 @@
 import styled from 'styled-components/macro'
 
-import Card from '../Card/Card'
+import Location from '../Location/Location'
 
-function CardList({locations}) {
+function LocationList({locations}) {
   return (
-    <Wrapper>
+    <Section>
         <ul>
           {locations.map(location => (
-            <Card
+            <Location
               image={location.image}
               title={location.title}
               description={location.description}
@@ -15,19 +15,19 @@ function CardList({locations}) {
             />
           ))}
         </ul>
-    </Wrapper>
+    </Section>
   )
 }
 
-export default CardList
+export default LocationList
 
-const Wrapper = styled.section`
-  border: 1px solid red;
+const Section = styled.section`
+overflow: scroll;
   padding-right: 20px;
   text-align: center;
-  padding-top: 60px;
-  width: auto;
+  padding-top: 40px;
+  max-width 600px;
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 50px;
 `

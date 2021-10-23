@@ -15,7 +15,6 @@ export default Hello
 
 const Wrapper = styled.section`
   height: auto;
-  border: 1px solid red;
   text-align: center;
   margin: auto;
   padding-top: 100px;

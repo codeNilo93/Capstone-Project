@@ -3,23 +3,23 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
-    <Wrapper>
-      <StyledLink to="/home">Home</StyledLink>
+    <Nav>
+      <StyledLinkLeft to="/home">Home</StyledLinkLeft>
 
-      <StyledLink to="/form">Create</StyledLink>
+      <StyledLink to="/form">Create Location</StyledLink>
 
-      <StyledLink to="/adventure">AdventureMap</StyledLink>
-    </Wrapper>
+      <StyledLinkRight to="/adventure">AdventureMap</StyledLinkRight>
+    </Nav>
   )
 }
 
 export default Footer
 
-const StyledLink = styled(Link)`
-border: 2px solid white;
-color: black;
+const StyledLinkLeft = styled(Link)`
+border-top-left-radius: 50px 20px;
+  color: black;
   text-decoration: none;
-  background-color: #ff9671;
+  background-color: #ff6f91;
   flex: 25%;
   display: flex;
   justify-content: center;
@@ -31,8 +31,42 @@ color: black;
   }
 `
 
-const Wrapper = styled.nav`
-  border-radius: 5%;
+const StyledLinkRight = styled(Link)`
+border-top-right-radius: 50px 20px;
+  color: black;
+  text-decoration: none;
+  background-color: #ff6f91;
+  flex: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid white;
+    box-shadow: 10px 10px 10px 4px grey;
+  }
+`
+
+
+const StyledLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+  background-color: #ff6f91;
+  flex: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid white;
+    box-shadow: 10px 10px 10px 4px grey;
+  }
+`
+
+const Nav = styled.nav`
+width: 100%;
+  border-top-right-radius: 50px 20px;
+  border-top-left-radius: 50px 20px;
   position: fixed;
   bottom: 0;
   width: 100%;

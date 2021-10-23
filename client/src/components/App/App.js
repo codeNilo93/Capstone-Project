@@ -1,12 +1,12 @@
 import { Route, Switch } from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import styled from 'styled-components'
+import { useState } from 'react'
+import styled from 'styled-components/macro'
 
 import Header from '../Header/Header'
 import Hello from '../Hello/Hello'
 import Login from '../Login/Login'
-import CardList from "../CardList/CardList"
+import LocationList from "../CardList/LocationList"
 import Form from '../Form/Form'
 import AdventureMap from '../AdventureMap/AdventureMap'
 import Footer from '../Footer/Footer'
@@ -31,7 +31,7 @@ function App({ data }) {
           <Login />
         </Route>
         <Route path="/home">
-          <CardList locations={locations}/>
+          <LocationList locations={locations}/>
         </Route>
         <Route path="/form">
           <Form onCreateNewLocation={handleCreateNewLocation} />
@@ -57,6 +57,7 @@ export default App
 
 const Wrapper = styled.section`
 height: 100vh;
-max-width: 600px;
 display: grid;
+grid-template-rows: auto 4rem;
+grid-template-areas: 'main' 'footer';
 `

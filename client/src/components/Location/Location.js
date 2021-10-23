@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 
 
-function Card (
+function Location (
     {image,
         title,
     description,
@@ -13,17 +13,16 @@ function Card (
 {
     return (
         <Wrapper>
-        <StyledImage src={image} alt="that looks nice!" />
+        <StyledImage src={image} alt=""/>
         <StyledDescription>
         <h3>{title}</h3>
-
-        <p>{description}</p>
+        <p>{category}</p>
         </StyledDescription>
         </Wrapper>
     )
 }
 
-export default Card
+export default Location
 
 const Wrapper = styled.li`
 overflow: hidden;
