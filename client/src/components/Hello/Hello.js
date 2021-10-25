@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import Klammerfisch from '../../assets/images/Klammerfisch.jpg'
+import Klammerfisch from '../../assets/images/Klammerfisch_frei.png'
 
 function Hello() {
   return (
