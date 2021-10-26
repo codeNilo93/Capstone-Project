@@ -8,7 +8,7 @@ import Hello from '../Hello/Hello'
 import Login from '../Login/Login'
 import LocationList from "../LocationList/LocationList"
 import Form from '../Form/Form'
-import AdventureMap from '../AdventureMap/AdventureMap'
+import AdventureMap from '../Map/AdventureMap/AdventureMap'
 import Footer from '../Footer/Footer'
 import Profile from '../Profile/Profile'
 

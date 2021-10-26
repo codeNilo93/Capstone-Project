@@ -3,14 +3,12 @@ import GoogleMapReact from 'google-map-react'
 
 const AdventureMap = () => {
 
-  const Key = process.env.REACT_APP_GOOGLE_MAPS_KEY
-
   const defaultCoordinates = { lat: 51.062896765257314, lng: 13.746083328789133}
   
   return (
     <Wrapper>
       <GoogleMapReact
-      bootstrapURLKeys={ {Key} }
+      bootstrapURLKeys={process.env.REACT_APP_GOOGLE_MAPS_KEY}
       defaultCenter={defaultCoordinates}
       center={defaultCoordinates}
       defaultZoom={14}
