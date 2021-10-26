@@ -6,7 +6,7 @@ import styled from 'styled-components/macro'
 import Header from '../Header/Header'
 import Hello from '../Hello/Hello'
 import Login from '../Login/Login'
-import LocationList from "../CardList/LocationList"
+import LocationList from "../LocationList/LocationList"
 import Form from '../Form/Form'
 import AdventureMap from '../AdventureMap/AdventureMap'
 import Footer from '../Footer/Footer'
