@@ -18,11 +18,10 @@ function LocationList({locations}) {
     </Section>
   )
 }
-
 export default LocationList
 
 const Section = styled.section`
-overflow: scroll;
+  overflow: scroll;
   padding-right: 20px;
   text-align: center;
   padding-top: 40px;

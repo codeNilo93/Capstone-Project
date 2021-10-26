@@ -70,6 +70,7 @@ background-color: #D3E9F3;
 `
 
 const InputField = styled.input`
+border: none; 
   width: 75%;
   height: auto;
   background-color: #BCCEA1;

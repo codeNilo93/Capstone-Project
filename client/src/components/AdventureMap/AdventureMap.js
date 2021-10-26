@@ -1,10 +1,26 @@
 import styled from 'styled-components/macro'
+import GoogleMapReact from 'google-map-react'
 
-function AdventureMap() {
+const AdventureMap = () => {
+
+  const Key = process.env.REACT_APP_GOOGLE_MAPS_KEY
+
+  const defaultCoordinates = { lat: 51.062896765257314, lng: 13.746083328789133}
+  
   return (
     <Wrapper>
-      <h2>Wanna see all Adventures at once? Fear not, I'll show you an interactive map soon :P </h2>
-      <p>This box shall hold the map</p>
+      <GoogleMapReact
+      bootstrapURLKeys={ {Key} }
+      defaultCenter={defaultCoordinates}
+      center={defaultCoordinates}
+      defaultZoom={14}
+      margin={[50, 50, 50, 50]}
+      options={''}
+      onChange={''}
+      onChildClick={''}
+      >
+      </GoogleMapReact>
+      
     </Wrapper>
   )
 }
@@ -12,14 +28,7 @@ function AdventureMap() {
 export default AdventureMap
 
 const Wrapper = styled.section`
-  height: auto;
+padding-top: 55px;
   border: 1px solid red;
-  text-align: center;
-  margin: auto;
-  padding-top: 200px;
-  padding-bottom: 300px;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+
 `
