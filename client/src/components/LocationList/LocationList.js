@@ -2,19 +2,21 @@ import styled from 'styled-components/macro'
 
 import Location from '../Location/Location'
 
-function LocationList({locations}) {
+function LocationList({ locations }) {
   return (
     <Section>
-        <ul>
-          {locations.map(location => (
-            <Location
-              image={location.image}
-              title={location.title}
-              description={location.description}
-              category={location.category}
-            />
-          ))}
-        </ul>
+      <ul>
+        {locations.map(location => (
+          <Location
+            image={location.image}
+            title={location.title}
+            description={location.description}
+            category={location.category}
+            lat={location.lat}
+            lng={location.lng}
+          />
+        ))}
+      </ul>
     </Section>
   )
 }
