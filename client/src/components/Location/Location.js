@@ -5,7 +5,7 @@ function Location({ image, title, description, lat, lng, category }) {
     <Wrapper>
       <StyledImage src={image} alt="" />
       <StyledDescription>
-        <h3>{title}</h3>
+        <h2>{title}</h2>
         <p>{category}</p>
         <p>{lat}</p>
         <p>{lng}</p>
