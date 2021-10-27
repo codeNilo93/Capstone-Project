@@ -37,7 +37,7 @@ function AdventureMap({ locations }) {
   return (
     <Wrapper>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: 'AIzaSyAzgnrUzmJqJ4c0AEfJoPw-A1wj0s2e_ss' }}
+        bootstrapURLKeys={process.env.REACT_APP_GOOGLE_MAPS_KEY}
         defaultCenter={defaultCoordinates}
         center={defaultCoordinates}
         defaultZoom={14}
@@ -47,7 +47,7 @@ function AdventureMap({ locations }) {
         onChildClick={''}
       >
         {locations.map(item => (
-          <MapMarker lat={item.lat} lng={item.lng} text="My Marker" />
+          <MapMarker lat={item.lat} lng={item.lng}></MapMarker>
         ))}
       </GoogleMapReact>
     </Wrapper>
