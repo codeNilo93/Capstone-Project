@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 import GoogleMapReact from 'google-map-react'
-import RoomIcon from '@mui/icons-material/Room'
+import MapMarker from '../MapMarker/Marker'
 
 const mockData = [
   {
@@ -26,13 +26,7 @@ const mockData = [
   },
 ]
 
-const AnyReactComponent = ({ text }) => (
-  <div>
-    <img src={RoomIcon} />
-  </div>
-)
-
-const AdventureMap = locations => {
+function AdventureMap({ locations }) {
   const Key = process.env.REACT_APP_GOOGLE_MAPS_KEY
 
   const defaultCoordinates = {
@@ -53,7 +47,7 @@ const AdventureMap = locations => {
         onChildClick={''}
       >
         {locations.map(item => (
-          <AnyReactComponent lat={item.lat} lng={item.lng} text="My Marker" />
+          <MapMarker lat={item.lat} lng={item.lng} text="My Marker" />
         ))}
       </GoogleMapReact>
     </Wrapper>
