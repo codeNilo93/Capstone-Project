@@ -27,6 +27,7 @@ const Wrapper = styled.li`
   height: auto;
   padding-right: 5px;
   margin-bottom: 10px;
+  border-style: outset;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -47,6 +48,7 @@ font-weight: bold
 `
 
 const StyledImage = styled.img`
+  max-width: 100%;
   margin: auto;
   border-radius: 2%;
   width: 50%;
@@ -65,9 +67,12 @@ const InformationRow = styled.section`
 `
 
 const CategoryTag = styled.div`
-  width: 100px;
+  font-size: 2rem;
+  margin: auto;
+  padding: 7px;
+  width: auto;
   height: auto;
-  border: 2px solid white;
+  border: 3px outset white;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;

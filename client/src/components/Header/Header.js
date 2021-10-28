@@ -22,7 +22,7 @@ const Wrapper = styled.header`
   border-bottom-right-radius: 50px 20px;
   border-bottom-left-radius: 50px 20px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  background-color: #fd746c;
+  background-color: #cb2d3e;
   position: fixed;
   z-index: 2;
   top: 0;
