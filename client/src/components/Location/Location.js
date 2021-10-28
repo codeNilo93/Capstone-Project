@@ -3,12 +3,10 @@ import styled from 'styled-components'
 function Location({ image, title, description, lat, lng, category }) {
   return (
     <Wrapper>
-      <StyledImage src={image} alt="" />
       <StyledDescription>
-        <h2>{title}</h2>
+        <StyledImage src={image} alt="" />
+        <CardTitle>{title}</CardTitle>
         <p>{category}</p>
-        <p>{lat}</p>
-        <p>{lng}</p>
       </StyledDescription>
     </Wrapper>
   )
@@ -31,11 +29,12 @@ const Wrapper = styled.li`
 `
 
 const StyledDescription = styled.section`
+font-weight: bold
   flex: 2;
   padding: 10px 0 10px 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   h3 {
     font-size: 1.1rem;
     font-weight: 600;
@@ -44,9 +43,14 @@ const StyledDescription = styled.section`
 `
 
 const StyledImage = styled.img`
+  margin: auto;
+  border-radius: 2%;
   width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px 0 0 5px;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+`
+const CardTitle = styled.p`
+  font-weight: bold;
+  text-decoration: underline;
 `

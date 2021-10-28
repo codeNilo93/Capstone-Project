@@ -12,17 +12,17 @@ function Header() {
 
 export default Header
 
-const HeaderTitle= styled.h1`
-margin: auto;
-padding-left: 40px;
+const HeaderTitle = styled.h1`
+  margin: auto;
+  padding-left: 40px;
 `
 
 const Wrapper = styled.header`
-width: 100%;  
-border-bottom-right-radius: 50px 20px;
-border-bottom-left-radius: 50px  20px;
+  width: 100%;
+  border-bottom-right-radius: 50px 20px;
+  border-bottom-left-radius: 50px 20px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  background-color: #FF6F91;
+  background-color: #ff8066;
   position: fixed;
   z-index: 2;
   top: 0;
@@ -35,7 +35,7 @@ border-bottom-left-radius: 50px  20px;
 `
 
 const StyledLink = styled(Link)`
-margin: auto;
+  margin: auto;
   text-decoration: none;
   background: transparent;
   border-radius: 3px;
