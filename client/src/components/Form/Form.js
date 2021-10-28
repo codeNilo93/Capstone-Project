@@ -2,43 +2,51 @@ import styled from 'styled-components/macro'
 import { nanoid } from 'nanoid'
 
 function Form({ onCreateNewLocation }) {
-
-
   function handleSubmit(event) {
     event.preventDefault()
     const form = event.target
-    const {
-        title,
-        description,
-        coordinates,
-        address,
-        category,
-    } = form.elements
+    const { title, description, coordinates, address, category } = form.elements
 
     onCreateNewLocation({
-        id: nanoid(),
-        title: title.value,
-        description: description.value,
-        coordinates: coordinates.value,
-        address: address.value,
-        category: category.value,
-      })
-      form.reset()
-    
-
+      id: nanoid(),
+      title: title.value,
+      description: description.value,
+      coordinates: coordinates.value,
+      address: address.value,
+      category: category.value,
+    })
+    form.reset()
   }
   return (
     <Wrapper>
       <FormMenu onSubmit={handleSubmit}>
-        <label><InputField name="title" type="text" placeholder="Title" /></label>
+        <label>
+          <InputField name="title" type="text" placeholder="Title" />
+        </label>
 
-        <label><InputField name="description" type="text" placeholder="Description" /></label>
+        <label>
+          <InputField
+            name="description"
+            type="text"
+            placeholder="Description"
+          />
+        </label>
 
-        <label><InputField name="coordinates" type="text" placeholder="Coordinates" /></label>
+        <label>
+          <InputField
+            name="coordinates"
+            type="text"
+            placeholder="Coordinates"
+          />
+        </label>
 
-        <label><InputField name="address" type="text" placeholder="Address" /></label>
+        <label>
+          <InputField name="address" type="text" placeholder="Address" />
+        </label>
 
-        <label><InputField name="category" type="text" placeholder="Category" /></label>
+        <label>
+          <InputField name="category" type="text" placeholder="Category" />
+        </label>
 
         <SubmitButton>Submit</SubmitButton>
       </FormMenu>
@@ -58,7 +66,7 @@ const Wrapper = styled.section`
 `
 
 const FormMenu = styled.form`
-background-color: #D3E9F3;
+  background-color: #d3e9f3;
   padding: 20px;
   background-color: white;
   display: flex;
@@ -70,10 +78,10 @@ background-color: #D3E9F3;
 `
 
 const InputField = styled.input`
-border: none; 
+  border: none;
   width: 75%;
   height: auto;
-  background-color: #BCCEA1;
+  background-color: #bccea1;
   border-radius: 20px;
   margin-bottom: 20px;
   padding: 20px 30px;
@@ -82,7 +90,7 @@ border: none;
 `
 
 const SubmitButton = styled.button`
-margin: 0;
+  margin: 0;
   margin-top: 10px;
   width: 37.5%;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,

@@ -16,10 +16,10 @@ function Footer() {
 export default Footer
 
 const StyledLinkLeft = styled(Link)`
-border-top-left-radius: 50px 20px;
+  border-top-left-radius: 50px 20px;
   color: black;
   text-decoration: none;
-  background-color: #ff6f91;
+  background-color: #cb2d3e;
   flex: 25%;
   display: flex;
   justify-content: center;
@@ -32,10 +32,10 @@ border-top-left-radius: 50px 20px;
 `
 
 const StyledLinkRight = styled(Link)`
-border-top-right-radius: 50px 20px;
+  border-top-right-radius: 50px 20px;
   color: black;
   text-decoration: none;
-  background-color: #ff6f91;
+  background-color: #cb2d3e;
   flex: 25%;
   display: flex;
   justify-content: center;
@@ -47,11 +47,10 @@ border-top-right-radius: 50px 20px;
   }
 `
 
-
 const StyledLink = styled(Link)`
   color: black;
   text-decoration: none;
-  background-color: #ff6f91;
+  background-color: #cb2d3e;
   flex: 25%;
   display: flex;
   justify-content: center;
@@ -64,7 +63,7 @@ const StyledLink = styled(Link)`
 `
 
 const Nav = styled.nav`
-width: 100%;
+  width: 100%;
   border-top-right-radius: 50px 20px;
   border-top-left-radius: 50px 20px;
   position: fixed;
