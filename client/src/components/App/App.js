@@ -2,8 +2,7 @@ import { Route, Switch } from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { useState } from 'react'
 import styled from 'styled-components/macro'
-import loadFromLocal from '../localStorage/loadFromLocal'
-import saveToLocal from '../localStorage/saveToLocal'
+import { saveToLocal, loadFromLocal } from '../localStorage/localStorage'
 
 import Header from '../Header/Header'
 import Hello from '../Hello/Hello'
@@ -16,7 +15,7 @@ import Profile from '../Profile/Profile'
 
 function App({ data }) {
   const [locations, setlocations] = useState(
-    loadFromLocal(`localActivities`) ?? data
+    loadFromLocal('localActivities') ?? data
   )
 
   return (

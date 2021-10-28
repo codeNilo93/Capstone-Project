@@ -19,7 +19,7 @@ const StyledLinkLeft = styled(Link)`
   border-top-left-radius: 50px 20px;
   color: black;
   text-decoration: none;
-  background-color: #ff8066;
+  background-color: #cb2d3e;
   flex: 25%;
   display: flex;
   justify-content: center;
@@ -35,7 +35,7 @@ const StyledLinkRight = styled(Link)`
   border-top-right-radius: 50px 20px;
   color: black;
   text-decoration: none;
-  background-color: #ff8066;
+  background-color: #cb2d3e;
   flex: 25%;
   display: flex;
   justify-content: center;
@@ -50,7 +50,7 @@ const StyledLinkRight = styled(Link)`
 const StyledLink = styled(Link)`
   color: black;
   text-decoration: none;
-  background-color: #ff8066;
+  background-color: #cb2d3e;
   flex: 25%;
   display: flex;
   justify-content: center;

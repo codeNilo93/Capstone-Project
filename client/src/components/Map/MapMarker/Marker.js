@@ -11,7 +11,4 @@ function MapMarker() {
 
 export default MapMarker
 
-// This styling was done for testing purposes in case I dont see anything
-const Marker = styled.div`
-  border: 1px solid red;
-`
+const Marker = styled.section``

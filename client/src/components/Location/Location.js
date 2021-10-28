@@ -4,9 +4,13 @@ function Location({ image, title, description, lat, lng, category }) {
   return (
     <Wrapper>
       <StyledDescription>
-        <StyledImage src={image} alt="" />
+        <StyledImage src={image} alt="Image of location" />
         <CardTitle>{title}</CardTitle>
-        <p>{category}</p>
+        <InformationRow>
+          <p>Rating</p>
+          <p>extend</p>
+          <CategoryTag>{category}</CategoryTag>
+        </InformationRow>
       </StyledDescription>
     </Wrapper>
   )
@@ -53,4 +57,18 @@ const StyledImage = styled.img`
 const CardTitle = styled.p`
   font-weight: bold;
   text-decoration: underline;
+`
+
+const InformationRow = styled.section`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+`
+
+const CategoryTag = styled.div`
+  width: 100px;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 `

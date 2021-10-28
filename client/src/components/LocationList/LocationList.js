@@ -8,6 +8,7 @@ function LocationList({ locations }) {
       <ul>
         {locations.map(location => (
           <Location
+            key={location.id}
             image={location.image}
             title={location.title}
             description={location.description}
