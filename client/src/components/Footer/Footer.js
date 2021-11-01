@@ -1,19 +1,38 @@
 import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
+import AddCard from '../../assets/SVG/AddCard.svg'
+import Home from '../../assets/SVG/Home.svg'
+import AdventureMap from '../../assets/SVG/Map.svg'
 
 function Footer() {
   return (
     <Nav>
-      <StyledLinkLeft to="/home">Home</StyledLinkLeft>
+      <StyledLinkLeft to="/home">
+        <StyledText>
+          <img src={Home} />
+        </StyledText>
+      </StyledLinkLeft>
 
-      <StyledLink to="/form">Create Location</StyledLink>
+      <StyledLink to="/form">
+        <StyledText>
+          <img src={AddCard} />
+        </StyledText>
+      </StyledLink>
 
-      <StyledLinkRight to="/adventure">AdventureMap</StyledLinkRight>
+      <StyledLinkRight to="/adventure">
+        <StyledText>
+          <img src={AdventureMap} />
+        </StyledText>
+      </StyledLinkRight>
     </Nav>
   )
 }
 
 export default Footer
+
+const StyledText = styled.p`
+  color: white;
+`
 
 const StyledLinkLeft = styled(Link)`
   border-top-left-radius: 50px 20px;

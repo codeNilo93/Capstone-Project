@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Extend from '../../assets/SVG/Extend.svg'
 
 function Location({ image, title, description, lat, lng, category }) {
   return (
@@ -8,7 +9,7 @@ function Location({ image, title, description, lat, lng, category }) {
         <CardTitle>{title}</CardTitle>
         <InformationRow>
           <p>Rating</p>
-          <p>extend</p>
+          <img src={Extend} />
           <CategoryTag>{category}</CategoryTag>
         </InformationRow>
       </StyledDescription>
@@ -67,7 +68,7 @@ const InformationRow = styled.section`
 `
 
 const CategoryTag = styled.div`
-  font-size: 2rem;
+  font-size: 1.2rem;
   margin: auto;
   padding: 7px;
   width: auto;
