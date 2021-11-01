@@ -17,6 +17,7 @@ function App({ data }) {
   const [locations, setlocations] = useState(
     loadFromLocal('localActivities') ?? data
   )
+  localStorage.clear()
 
   return (
     <Wrapper>
