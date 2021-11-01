@@ -11,7 +11,7 @@ function AdventureMap({ locations }) {
   return (
     <Wrapper>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: 'AIzaSyAzgnrUzmJqJ4c0AEfJoPw - A1wj0s2e_ss' }}
+        bootstrapURLKeys={{ key: '' }}
         defaultCenter={defaultCoordinates}
         center={defaultCoordinates}
         defaultZoom={14}

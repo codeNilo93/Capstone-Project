@@ -1,11 +1,39 @@
 import styled from 'styled-components/macro'
 import { nanoid } from 'nanoid'
+import axios from 'axios'
+
+const CLOUDNAME = process.env.REACT_APP_CLOUDINARY_CLOUDNAME
+const PRESET = process.env.REACT_APP_CLOUDINARY_PRESET
 
 function Form({ onCreateNewLocation }) {
   function handleSubmit(event) {
     event.preventDefault()
     const form = event.target
-    const { title, description, coordinates, address, category } = form.elements
+    const { title, description, coordinates, address, category, image } =
+      form.elements
+
+    const [image, setImage] = useState('')
+
+    function upload(event) {
+      const url = `https://api.cloudinary.com/v1_1/${CLOUDNAME}/upload`
+
+      const formData = new FormData()
+      formData.append('file', event.target.files[0])
+      formData.append('upload_preset', PRESET)
+
+      axios
+        .post(url, formData, {
+          headers: {
+            'Content-type': 'multipart/form-data',
+          },
+        })
+        .then(onImageSave)
+        .catch(err => console.error(err))
+    }
+
+    function onImageSave(response) {
+      setImage(response.data.url)
+    }
 
     onCreateNewLocation({
       id: nanoid(),
@@ -14,40 +42,51 @@ function Form({ onCreateNewLocation }) {
       coordinates: coordinates.value,
       address: address.value,
       category: category.value,
+      image: image.value,
     })
     form.reset()
   }
   return (
     <Wrapper>
       <FormMenu onSubmit={handleSubmit}>
-        <label>
-          <InputField name="title" type="text" placeholder="Title" />
-        </label>
+        <FormGrid>
+          <label>
+            <InputField name="title" type="text" placeholder="Title" />
+          </label>
 
-        <label>
-          <InputField
-            name="description"
-            type="text"
-            placeholder="Description"
-          />
-        </label>
+          <label>
+            <InputField
+              name="description"
+              type="text"
+              placeholder="Description"
+            />
+          </label>
 
-        <label>
-          <InputField
-            name="coordinates"
-            type="text"
-            placeholder="Coordinates"
-          />
-        </label>
+          <label>
+            <InputField
+              name="coordinates"
+              type="text"
+              placeholder="Coordinates"
+            />
+          </label>
 
-        <label>
-          <InputField name="address" type="text" placeholder="Address" />
-        </label>
+          <label>
+            <InputField name="address" type="text" placeholder="Address" />
+          </label>
 
-        <label>
-          <InputField name="category" type="text" placeholder="Category" />
-        </label>
+          <label>
+            <InputField name="category" type="text" placeholder="Category" />
+          </label>
 
+          <label>
+            <InputField
+              type="text"
+              name="imgUrl"
+              id="imgUrl"
+              placeholder="Enter img url.."
+            />
+          </label>
+        </FormGrid>
         <SubmitButton>Submit</SubmitButton>
       </FormMenu>
     </Wrapper>
@@ -55,6 +94,11 @@ function Form({ onCreateNewLocation }) {
 }
 
 export default Form
+
+const FormGrid = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`
 
 const Wrapper = styled.section`
   padding-right: 20px;
@@ -69,8 +113,6 @@ const FormMenu = styled.form`
   background-color: #d3e9f3;
   padding: 20px;
   background-color: white;
-  display: flex;
-  flex-direction: column;
   border: 2px solid white;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
@@ -78,10 +120,10 @@ const FormMenu = styled.form`
 `
 
 const InputField = styled.input`
+  font-size: xx-small;
   border: none;
   width: 75%;
   height: auto;
-  background-color: #bccea1;
   border-radius: 20px;
   margin-bottom: 20px;
   padding: 20px 30px;

@@ -14,7 +14,9 @@ function MapMarker({ title, description, image }) {
 
   return (
     <div>
-      <button onClick={openPopup}>{showDetails ? 'less' : 'more'}</button>
+      <MapMarkerButton>
+        <img src={RoomIcon} alt="my image" onClick={openPopup} />
+      </MapMarkerButton>
       {showDetails ? (
         <TextBlock>
           <StyledImage src={image} alt="image of location" />
@@ -28,8 +30,13 @@ function MapMarker({ title, description, image }) {
 
 export default MapMarker
 
+const MapMarkerButton = styled.button`
+  background: none;
+  border: none;
+`
+
 const TextBlock = styled.div`
-  z-index: -1;
+  z-index: 10;
   width: 150px;
   height: auto;
   background-color: white;
@@ -37,21 +44,6 @@ const TextBlock = styled.div`
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  ${({ FadeIn }) =>
-    FadeIn &&
-    css`
-      animation-duration: 3s;
-      animation-iteration-count: 1;
-      animation-name: fadeIn;
-      @keyframes fadein {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-    `}
 `
 
 const StyledImage = styled.img`
