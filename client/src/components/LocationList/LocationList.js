@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro'
-
 import Location from '../Location/Location'
 
 function LocationList({ locations }) {
@@ -13,6 +12,9 @@ function LocationList({ locations }) {
             title={location.title}
             description={location.description}
             category={location.category}
+            street={location.street}
+            zipcode={location.zipcode}
+            city={location.city}
             lat={location.lat}
             lng={location.lng}
           />

@@ -1,17 +1,44 @@
 import styled from 'styled-components'
-import Extend from '../../assets/SVG/Extend.svg'
+import { useState } from 'react'
+function Location({
+  image,
+  title,
+  description,
+  lat,
+  lng,
+  category,
+  street,
+  zipcode,
+  city,
+}) {
+  const [showDetails, setshowDetails] = useState(false)
 
-function Location({ image, title, description, lat, lng, category }) {
+  const handleDetailsButtonClick = () => {
+    setshowDetails(showDetails ? false : true)
+  }
+
   return (
     <Wrapper>
       <StyledDescription>
         <StyledImage src={image} alt="Image of location" />
         <CardTitle>{title}</CardTitle>
         <InformationRow>
-          <p>Rating</p>
-          <img src={Extend} />
+          <CategoryTag>Rating</CategoryTag>
+          <ButtonMore onClick={handleDetailsButtonClick}>
+            {showDetails ? 'less' : 'more'}
+          </ButtonMore>
           <CategoryTag>{category}</CategoryTag>
         </InformationRow>
+        {showDetails ? (
+          <HiddenRow>
+            <p>Street</p>
+            <p>{street}</p>
+            <p>Zip Code</p>
+            <p>{zipcode}</p>
+            <p>City</p>
+            <p>{city}</p>
+          </HiddenRow>
+        ) : null}
       </StyledDescription>
     </Wrapper>
   )
@@ -67,8 +94,27 @@ const InformationRow = styled.section`
   grid-template-columns: repeat(3, 1fr);
 `
 
+const HiddenRow = styled.section`
+  display: grid;
+  grid-template-columns: 50% 50%;
+  font-size: 15px;
+  padding-top: 20px;
+`
+
+const ButtonMore = styled.button`
+  width: auto;
+  background-color: #fab371;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  margin-top: 15px;
+  border-radius: 10px 10px 10px 10px;
+`
+
 const CategoryTag = styled.div`
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: auto;
   padding: 7px;
   width: auto;

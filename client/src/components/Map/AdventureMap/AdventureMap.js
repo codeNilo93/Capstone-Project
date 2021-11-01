@@ -15,7 +15,6 @@ function AdventureMap({ locations }) {
         defaultCenter={defaultCoordinates}
         center={defaultCoordinates}
         defaultZoom={14}
-        margin={[50, 50, 50, 50]}
         options={''}
         onChange={''}
         onChildClick={''}
@@ -27,9 +26,8 @@ function AdventureMap({ locations }) {
             key={i}
             title={item.title}
             description={item.description}
-          >
-            <p>{item.name}</p>
-          </MapMarker>
+            image={item.image}
+          ></MapMarker>
         ))}
       </GoogleMapReact>
     </Wrapper>
