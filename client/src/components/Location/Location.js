@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { useState } from 'react'
 function Location({
-  image,
+  imgUrl,
   title,
   description,
   lat,
@@ -20,7 +20,7 @@ function Location({
   return (
     <Wrapper>
       <StyledDescription>
-        <StyledImage src={image} alt="Image of location" />
+        <StyledImage src={imgUrl} alt="Image of location" />
         <CardTitle>{title}</CardTitle>
         <InformationRow>
           <CategoryTag>Rating</CategoryTag>

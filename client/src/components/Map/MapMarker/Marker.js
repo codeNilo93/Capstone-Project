@@ -1,25 +1,22 @@
 import styled from 'styled-components/macro'
 import { useState } from 'react'
 import RoomIcon from './RoomIcon.svg'
-import { css } from 'styled-components'
 
-function MapMarker({ title, description, image }) {
+function MapMarker({ title, description, imgUrl }) {
   const [showDetails, setshowDetails] = useState(false)
 
   const openPopup = () => {
     setshowDetails(showDetails ? false : true)
   }
 
-  const [FadeIn, SetFadeIn] = useState(false)
-
   return (
     <div>
       <MapMarkerButton>
-        <img src={RoomIcon} alt="my image" onClick={openPopup} />
+        <img src={RoomIcon} alt="marker" onClick={openPopup} />
       </MapMarkerButton>
       {showDetails ? (
         <TextBlock>
-          <StyledImage src={image} alt="image of location" />
+          <StyledImage src={imgUrl} alt="image of location" />
           <h3>{title}</h3>
           <p>{description}</p>
         </TextBlock>
@@ -36,6 +33,8 @@ const MapMarkerButton = styled.button`
 `
 
 const TextBlock = styled.div`
+  text-align: center;
+  margin: auto;
   z-index: 10;
   width: 150px;
   height: auto;
@@ -49,5 +48,5 @@ const TextBlock = styled.div`
 const StyledImage = styled.img`
   width: 100px;
   height: 200 px;
-  margin: 0;
+  margin: auto;
 `

@@ -26,7 +26,7 @@ function AdventureMap({ locations }) {
             key={i}
             title={item.title}
             description={item.description}
-            image={item.image}
+            imgUrl={item.imgUrl}
           ></MapMarker>
         ))}
       </GoogleMapReact>

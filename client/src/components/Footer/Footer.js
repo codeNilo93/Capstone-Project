@@ -9,19 +9,19 @@ function Footer() {
     <Nav>
       <StyledLinkLeft to="/home">
         <StyledText>
-          <img src={Home} />
+          <img src={Home} alt="Home" />
         </StyledText>
       </StyledLinkLeft>
 
       <StyledLink to="/form">
         <StyledText>
-          <img src={AddCard} />
+          <img src={AddCard} alt="form" />
         </StyledText>
       </StyledLink>
 
       <StyledLinkRight to="/adventure">
         <StyledText>
-          <img src={AdventureMap} />
+          <img src={AdventureMap} alt="map" />
         </StyledText>
       </StyledLinkRight>
     </Nav>

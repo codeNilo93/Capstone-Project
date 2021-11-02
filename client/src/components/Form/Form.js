@@ -1,39 +1,12 @@
 import styled from 'styled-components/macro'
 import { nanoid } from 'nanoid'
-import axios from 'axios'
-
-const CLOUDNAME = process.env.REACT_APP_CLOUDINARY_CLOUDNAME
-const PRESET = process.env.REACT_APP_CLOUDINARY_PRESET
 
 function Form({ onCreateNewLocation }) {
   function handleSubmit(event) {
     event.preventDefault()
     const form = event.target
-    const { title, description, coordinates, address, category, image } =
+    const { title, description, coordinates, address, category, imgUrl } =
       form.elements
-
-    const [image, setImage] = useState('')
-
-    function upload(event) {
-      const url = `https://api.cloudinary.com/v1_1/${CLOUDNAME}/upload`
-
-      const formData = new FormData()
-      formData.append('file', event.target.files[0])
-      formData.append('upload_preset', PRESET)
-
-      axios
-        .post(url, formData, {
-          headers: {
-            'Content-type': 'multipart/form-data',
-          },
-        })
-        .then(onImageSave)
-        .catch(err => console.error(err))
-    }
-
-    function onImageSave(response) {
-      setImage(response.data.url)
-    }
 
     onCreateNewLocation({
       id: nanoid(),
@@ -42,13 +15,13 @@ function Form({ onCreateNewLocation }) {
       coordinates: coordinates.value,
       address: address.value,
       category: category.value,
-      image: image.value,
+      imgUrl: imgUrl.value,
     })
     form.reset()
   }
   return (
     <Wrapper>
-      <FormMenu onSubmit={handleSubmit}>
+      <FormMenu onSubmit={event => handleSubmit(event)}>
         <FormGrid>
           <label>
             <InputField name="title" type="text" placeholder="Title" />

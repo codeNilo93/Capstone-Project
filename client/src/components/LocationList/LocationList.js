@@ -8,7 +8,7 @@ function LocationList({ locations }) {
         {locations.map(location => (
           <Location
             key={location.id}
-            image={location.image}
+            imgUrl={location.imgUrl}
             title={location.title}
             description={location.description}
             category={location.category}

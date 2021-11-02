@@ -5,15 +5,21 @@ import styled from 'styled-components/macro'
 import { saveToLocal, loadFromLocal } from '../localStorage/localStorage'
 
 import Header from '../Header/Header'
-import Hello from '../Hello/Hello'
 import Login from '../Login/Login'
 import LocationList from '../LocationList/LocationList'
 import Form from '../Form/Form'
 import AdventureMap from '../Map/AdventureMap/AdventureMap'
 import Footer from '../Footer/Footer'
-import Profile from '../Profile/Profile'
 
 function App({ data }) {
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [activeUser, setActiveUser] = useState('')
+
+  function handleLogin(username) {
+    setIsLoggedIn(!isLoggedIn)
+    setActiveUser(username)
+  }
+
   const [locations, setlocations] = useState(
     loadFromLocal('localActivities') ?? data
   )
@@ -25,19 +31,17 @@ function App({ data }) {
         <Header />
         <Switch>
           <Route exact path="/">
-            <Hello />
+            {!isLoggedIn ? (
+              <Login onLogin={handleLogin} />
+            ) : (
+              <LocationList letActiveUser={activeUser} locations={locations} />
+            )}
           </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/home">
+          <Route exact path="/home">
             <LocationList locations={locations} />
           </Route>
           <Route path="/form">
             <Form onCreateNewLocation={handleCreateNewLocation} />
-          </Route>
-          <Route path="/profile">
-            <Profile />
           </Route>
           <Route path="/adventure">
             <AdventureMap locations={locations} />

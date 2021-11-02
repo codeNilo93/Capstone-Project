@@ -9,7 +9,7 @@
         "lat":"51.06034664461434",
         "lng": "13.750609295740333",
       "price": "0",
-      "image": "https://worldofescapes-com.s3.amazonaws.com/uploads/quests/11467/medium/teamescape-dresden-spiel-um-leben-und-tod.png",
+      "imgUrl": "https://worldofescapes-com.s3.amazonaws.com/uploads/quests/11467/medium/teamescape-dresden-spiel-um-leben-und-tod.png",
       "category": "Thrill"
     },
 
@@ -23,7 +23,7 @@
         "lat":"51.06629634508333",
         "lng": "13.750479657438206",
       "price": "0",
-      "image": "https://prinz.de/wp-content/uploads/2016/02/indoor_team_escape_dd_foto_pr.jpg-768x512.jpg",
+      "imgUrl": "https://prinz.de/wp-content/uploads/2016/02/indoor_team_escape_dd_foto_pr.jpg-768x512.jpg",
       "category": "Thrill"
     },
 
@@ -37,7 +37,7 @@
         "lat":"51.06411485811234",
         "lng": "13.74756706495685",
       "price": "0",
-      "image": "https://alexanderpoetzsch.de/webseiten/wp-content/uploads/DSC01011-licht-an-lu%CC%88ftung-schwarz-klein-1300x731.jpg",
+      "imgUrl": "https://alexanderpoetzsch.de/webseiten/wp-content/uploads/DSC01011-licht-an-lu%CC%88ftung-schwarz-klein-1300x731.jpg",
       "category": "Thrill"
     },
     { 
@@ -50,7 +50,7 @@
         "lat":"51.08252940058621",
         "lng": "13.696659257533021",
       "price": "0",
-      "image": "https://dawo-dresden.de/wp-content/uploads/2021/08/Lasertag_Dresden.jpg",
+      "imgUrl": "https://dawo-dresden.de/wp-content/uploads/2021/08/Lasertag_Dresden.jpg",
       "category": "Adventure"
     },
     { 
@@ -63,7 +63,7 @@
         "lat":"51.005206855518736",
         "lng": "13.828627456209666",
       "price": "0",
-      "image": "https://lh5.googleusercontent.com/p/AF1QipNJcqup126_x3x6NH-8c1RMW7uZ-_BVM9hUJpDP=w1080-k-no",
+      "imgUrl": "https://lh5.googleusercontent.com/p/AF1QipNJcqup126_x3x6NH-8c1RMW7uZ-_BVM9hUJpDP=w1080-k-no",
       "category": "Adventure"
     }
   ]
