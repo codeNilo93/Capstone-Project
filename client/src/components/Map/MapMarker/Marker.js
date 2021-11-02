@@ -2,7 +2,17 @@ import styled from 'styled-components/macro'
 import { useState } from 'react'
 import RoomIcon from './RoomIcon.svg'
 
-function MapMarker({ title, description, imgUrl }) {
+function MapMarker({
+  imgUrl,
+  title,
+  description,
+  lat,
+  lng,
+  category,
+  street,
+  zipcode,
+  city,
+}) {
   const [showDetails, setshowDetails] = useState(false)
 
   const openPopup = () => {
@@ -16,9 +26,21 @@ function MapMarker({ title, description, imgUrl }) {
       </MapMarkerButton>
       {showDetails ? (
         <TextBlock>
-          <StyledImage src={imgUrl} alt="image of location" />
-          <h3>{title}</h3>
-          <p>{description}</p>
+          <FormGrid>
+            <TitleWrapper>
+              <StyledImage src={imgUrl} alt="image of location" />
+              <h3>{title}</h3>
+            </TitleWrapper>
+            <TextWrapper>
+              <StyledQuestion>What's up?</StyledQuestion>
+              <p>{description}</p>
+              <StyledQuestion>Where to?</StyledQuestion>
+              <p>{street}</p>
+              <p>
+                {zipcode}, {city}
+              </p>
+            </TextWrapper>
+          </FormGrid>
         </TextBlock>
       ) : null}
     </div>
@@ -26,6 +48,21 @@ function MapMarker({ title, description, imgUrl }) {
 }
 
 export default MapMarker
+
+const StyledQuestion = styled.p`
+  font-weight: bold;
+`
+
+const FormGrid = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`
+
+const TitleWrapper = styled.div``
+
+const TextWrapper = styled.div`
+  font-size: x-small;
+`
 
 const MapMarkerButton = styled.button`
   background: none;
@@ -36,7 +73,7 @@ const TextBlock = styled.div`
   text-align: center;
   margin: auto;
   z-index: 10;
-  width: 150px;
+  width: 250px;
   height: auto;
   background-color: white;
   border: 3px outset white;

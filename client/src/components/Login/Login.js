@@ -72,11 +72,6 @@ function Login({ onLogin }) {
 
 export default Login
 
-const FormGrid = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-`
-
 const StyledText = styled.p`
   font-size: xx-small;
 `

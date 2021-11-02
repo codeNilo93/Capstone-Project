@@ -23,21 +23,22 @@ function Location({
         <StyledImage src={imgUrl} alt="Image of location" />
         <CardTitle>{title}</CardTitle>
         <InformationRow>
-          <CategoryTag>Rating</CategoryTag>
           <ButtonMore onClick={handleDetailsButtonClick}>
             {showDetails ? 'less' : 'more'}
           </ButtonMore>
           <CategoryTag>{category}</CategoryTag>
         </InformationRow>
         {showDetails ? (
-          <HiddenRow>
-            <p>Street</p>
-            <p>{street}</p>
-            <p>Zip Code</p>
-            <p>{zipcode}</p>
-            <p>City</p>
-            <p>{city}</p>
-          </HiddenRow>
+          <HiddenWrapper>
+            <HiddenDescription>"{description}"</HiddenDescription>
+            <HiddenHeading>Address</HiddenHeading>
+            <p>
+              {street}, {zipcode}, {city}
+            </p>
+            <HiddenHeading>Coordinates</HiddenHeading>
+            <p>latitude: {lat}</p>
+            <p>longitude: {lng}</p>
+          </HiddenWrapper>
         ) : null}
       </StyledDescription>
     </Wrapper>
@@ -45,6 +46,16 @@ function Location({
 }
 
 export default Location
+
+const HiddenDescription = styled.p`
+  word-break: break-all;
+  padding-top: 10px;
+  font-style: oblique;
+`
+
+const HiddenHeading = styled.p`
+  font-weight: bold;
+`
 
 const Wrapper = styled.li`
   overflow: hidden;
@@ -55,7 +66,7 @@ const Wrapper = styled.li`
   height: auto;
   padding-right: 5px;
   margin-bottom: 10px;
-  border-style: outset;
+  border 5px outset #cb2d3e;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -90,19 +101,18 @@ const CardTitle = styled.p`
 `
 
 const InformationRow = styled.section`
+  padding-left: 50px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 `
 
-const HiddenRow = styled.section`
-  display: grid;
-  grid-template-columns: 50% 50%;
+const HiddenWrapper = styled.section`
   font-size: 15px;
-  padding-top: 20px;
+  margin: 5px;
 `
 
 const ButtonMore = styled.button`
-  width: auto;
+  width: 50%;
   background-color: #fab371;
   border: none;
   padding: 10px 20px;
@@ -110,10 +120,14 @@ const ButtonMore = styled.button`
   text-decoration: none;
   font-size: 10px;
   margin-top: 15px;
-  border-radius: 10px 10px 10px 10px;
+  border: 3px outset #fab371;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 `
 
 const CategoryTag = styled.div`
+  font-variant: small-caps;
   font-size: 1rem;
   margin: auto;
   padding: 7px;

@@ -5,15 +5,27 @@ function Form({ onCreateNewLocation }) {
   function handleSubmit(event) {
     event.preventDefault()
     const form = event.target
-    const { title, description, coordinates, address, category, imgUrl } =
-      form.elements
+    const {
+      title,
+      description,
+      lat,
+      lng,
+      street,
+      zipcode,
+      city,
+      category,
+      imgUrl,
+    } = form.elements
 
     onCreateNewLocation({
       id: nanoid(),
       title: title.value,
       description: description.value,
-      coordinates: coordinates.value,
-      address: address.value,
+      lat: lat.value,
+      lng: lng.value,
+      street: street.value,
+      zipcode: zipcode.value,
+      city: city.value,
       category: category.value,
       imgUrl: imgUrl.value,
     })
@@ -36,15 +48,20 @@ function Form({ onCreateNewLocation }) {
           </label>
 
           <label>
-            <InputField
-              name="coordinates"
-              type="text"
-              placeholder="Coordinates"
-            />
+            <InputField name="lat" type="text" placeholder="latitude" />
+          </label>
+          <label>
+            <InputField name="lng" type="text" placeholder="longitude" />
           </label>
 
           <label>
-            <InputField name="address" type="text" placeholder="Address" />
+            <InputField name="street" type="text" placeholder="Street" />
+          </label>
+          <label>
+            <InputField name="zipcode" type="text" placeholder="Zip Code" />
+          </label>
+          <label>
+            <InputField name="city" type="text" placeholder="City" />
           </label>
 
           <label>
@@ -74,19 +91,18 @@ const FormGrid = styled.section`
 `
 
 const Wrapper = styled.section`
+  padding-left 10px;
   padding-right: 20px;
   text-align: center;
   padding-top: 60px;
   width: auto;
-  gap: 100px;
-  width: auto;
+  margin: auto;
 `
 
 const FormMenu = styled.form`
   background-color: #d3e9f3;
   padding: 20px;
-  background-color: white;
-  border: 2px solid white;
+  border 5px outset #cb2d3e;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -105,10 +121,10 @@ const InputField = styled.input`
 `
 
 const SubmitButton = styled.button`
-  margin: 0;
-  margin-top: 10px;
-  width: 37.5%;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  padding: 10px;
+  background: transparent;
+  border-radius: 3px;
+  border: 2px solid palevioletred;
+  color: palevioletred;
+  margin: 0 1em;
+  padding: 0.25em 1em;
 `

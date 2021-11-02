@@ -3,7 +3,7 @@ import Location from '../Location/Location'
 
 function LocationList({ locations }) {
   return (
-    <Section>
+    <WrapList>
       <ul>
         {locations.map(location => (
           <Location
@@ -20,12 +20,12 @@ function LocationList({ locations }) {
           />
         ))}
       </ul>
-    </Section>
+    </WrapList>
   )
 }
 export default LocationList
 
-const Section = styled.section`
+const WrapList = styled.section`
   overflow: scroll;
   padding-right: 20px;
   text-align: center;

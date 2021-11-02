@@ -1,8 +1,34 @@
 [
-    { 
+      { 
       "id": 1,
+      "title": "Superfly Dresden",
+      "description": "Cardio & Acrobatics in one package!",
+        "street": "Siemensstraße 9",
+        "zipcode": "01257",
+        "city": "Dresden",
+        "lat":"51.005206855518736",
+        "lng": "13.828627456209666",
+      "price": "0",
+      "imgUrl": "https://lh5.googleusercontent.com/p/AF1QipNJcqup126_x3x6NH-8c1RMW7uZ-_BVM9hUJpDP=w1080-k-no",
+      "category": "Adventure"
+    },
+    { 
+      "id": 2,
+      "title": "TeamEscape Dresden - Katharinenstraße",
+      "description": "Two Escape Rooms in one location!",
+        "street": "Katharinenstraße 21",
+        "zipcode": "01097",
+        "city": "Dresden",
+        "lat":"51.06629634508333",
+        "lng": "13.750479657438206",
+      "price": "0",
+      "imgUrl": "https://prinz.de/wp-content/uploads/2016/02/indoor_team_escape_dd_foto_pr.jpg-768x512.jpg",
+      "category": "Thrill"
+    },
+        { 
+      "id": 3,
       "title": "TeamEscape Dresden - Glacisstraße",
-      "description": "Escape - Room inmitten der Dresdner Neustadt",
+      "description": "creepy Escape Room with difficult puzzles",
         "street": "Glacisstraße 7",
         "zipcode": "01099",
         "city": "Dresden",
@@ -14,23 +40,9 @@
     },
 
     { 
-      "id": 2,
-      "title": "TeamEscape Dresden - Katharinenstraße",
-      "description": "Escape - Room inmitten der Dresdner Neustadt",
-        "street": "Katharinenstraße 21",
-        "zipcode": "01097",
-        "city": "Dresden",
-        "lat":"51.06629634508333",
-        "lng": "13.750479657438206",
-      "price": "0",
-      "imgUrl": "https://prinz.de/wp-content/uploads/2016/02/indoor_team_escape_dd_foto_pr.jpg-768x512.jpg",
-      "category": "Thrill"
-    },
-
-    { 
-      "id": 3,
+      "id": 4,
       "title": "AdventureRooms Dresden",
-      "description": "Escape - Room im legendären Dresdner Nudelturm",
+      "description": "Dresden's noodle tower is filled with mysteries",
         "street": "Bautzner Straße 1",
         "zipcode": "01099",
         "city": "Dresden",
@@ -41,7 +53,7 @@
       "category": "Thrill"
     },
     { 
-      "id": 4,
+      "id": 5,
       "title": "Laserland",
       "description": "Lasergamezentrum im Elbe-Park",
         "street": "Peschelstraße 33",
@@ -51,19 +63,6 @@
         "lng": "13.696659257533021",
       "price": "0",
       "imgUrl": "https://dawo-dresden.de/wp-content/uploads/2021/08/Lasertag_Dresden.jpg",
-      "category": "Adventure"
-    },
-    { 
-      "id": 5,
-      "title": "Superfly Dresden",
-      "description": "Cardio & Akrobatik in einem Paket!",
-        "street": "Siemensstraße 9",
-        "zipcode": "01257",
-        "city": "Dresden",
-        "lat":"51.005206855518736",
-        "lng": "13.828627456209666",
-      "price": "0",
-      "imgUrl": "https://lh5.googleusercontent.com/p/AF1QipNJcqup126_x3x6NH-8c1RMW7uZ-_BVM9hUJpDP=w1080-k-no",
       "category": "Adventure"
     }
   ]
