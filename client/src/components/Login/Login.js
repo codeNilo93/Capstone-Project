@@ -114,10 +114,12 @@ const InputField = styled.input`
 `
 
 const SubmitButton = styled.button`
-  margin: 0;
-  margin-top: 10px;
-  width: 37.5%;
+  background: transparent;
+  border-radius: 50px;
+  border: 2px outset #cb2d3e;
+  color: #cb2d3e;
+  margin: 0 1em;
+  padding: 0.25em 1em;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  padding: 10px;
 `

@@ -60,7 +60,7 @@ const HiddenHeading = styled.p`
 const Wrapper = styled.li`
   overflow: hidden;
   border-radius: 5px;
-  background-color: #fff;
+    background-color: #fff;
   display: flex;
   justify-content: space-between;
   height: auto;

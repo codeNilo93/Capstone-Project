@@ -100,7 +100,7 @@ const Wrapper = styled.section`
 `
 
 const FormMenu = styled.form`
-  background-color: #d3e9f3;
+  background-color: white;
   padding: 20px;
   border 5px outset #cb2d3e;
   border-radius: 25px;
@@ -113,6 +113,7 @@ const InputField = styled.input`
   border: none;
   width: 75%;
   height: auto;
+  border outset #cb2d3e;
   border-radius: 20px;
   margin-bottom: 20px;
   padding: 20px 30px;
@@ -121,10 +122,12 @@ const InputField = styled.input`
 `
 
 const SubmitButton = styled.button`
-  background: transparent;
-  border-radius: 3px;
-  border: 2px solid palevioletred;
-  color: palevioletred;
+  background: white;
+  border-radius: 50px;
+  border: 2px outset #cb2d3e;
+  color: #cb2d3e;
   margin: 0 1em;
   padding: 0.25em 1em;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 `
