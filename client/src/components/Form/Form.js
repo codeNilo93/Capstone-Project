@@ -67,16 +67,16 @@ function Form({ onCreateNewLocation }) {
           <label>
             <InputField name="category" type="text" placeholder="Category" />
           </label>
-
-          <label>
-            <InputField
-              type="text"
-              name="imgUrl"
-              id="imgUrl"
-              placeholder="Enter img url.."
-            />
-          </label>
         </FormGrid>
+        <label>
+          <InputField
+            type="text"
+            name="imgUrl"
+            id="imgUrl"
+            placeholder="Enter img url.."
+          />
+        </label>
+
         <SubmitButton>Submit</SubmitButton>
       </FormMenu>
     </Wrapper>

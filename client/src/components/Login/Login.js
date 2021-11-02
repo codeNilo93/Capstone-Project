@@ -4,22 +4,9 @@ import Klammerfisch from '../../assets/images/Klammerfisch.png'
 function Login({ onLogin }) {
   const userData = [
     {
-      username: 'FabianHanso',
+      username: 'DaniloBrauer',
       password: '123',
       firstname: 'Fabian',
-    },
-    {
-      username: 'SaschaCollinet',
-      password: '456',
-      firstname: 'John',
-    },
-    {
-      username: 'DaniloBraeuer',
-      password: 'Password',
-    },
-    {
-      username: 'VolkerMuehleib',
-      password: 'Password',
     },
   ]
 

@@ -41,5 +41,4 @@ export default AdventureMap
 
 const Wrapper = styled.section`
   padding-top: 55px;
-  border: 1px solid red;
 `

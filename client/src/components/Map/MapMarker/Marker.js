@@ -70,13 +70,14 @@ const MapMarkerButton = styled.button`
 `
 
 const TextBlock = styled.div`
+padding-top: 10px;
   text-align: center;
   margin: auto;
   z-index: 10;
   width: 250px;
   height: auto;
   background-color: white;
-  border: 3px outset white;
+  border 5px outset #cb2d3e;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
