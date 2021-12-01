@@ -1,29 +1,31 @@
 import styled from 'styled-components/macro'
-
 import Location from '../Location/Location'
 
 function LocationList({ locations }) {
   return (
-    <Section>
+    <WrapList>
       <ul>
         {locations.map(location => (
           <Location
             key={location.id}
-            image={location.image}
+            imgUrl={location.imgUrl}
             title={location.title}
             description={location.description}
             category={location.category}
+            street={location.street}
+            zipcode={location.zipcode}
+            city={location.city}
             lat={location.lat}
             lng={location.lng}
           />
         ))}
       </ul>
-    </Section>
+    </WrapList>
   )
 }
 export default LocationList
 
-const Section = styled.section`
+const WrapList = styled.section`
   overflow: scroll;
   padding-right: 20px;
   text-align: center;

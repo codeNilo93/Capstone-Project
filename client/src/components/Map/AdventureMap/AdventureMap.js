@@ -11,11 +11,10 @@ function AdventureMap({ locations }) {
   return (
     <Wrapper>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: 'AIzaSyAzgnrUzmJqJ4c0AEfJoPw - A1wj0s2e_ss' }}
+        bootstrapURLKeys={{ key: 'AIzaSyBtEjbk4zmwhczMADt1vTQ7uB3X0urmeik' }}
         defaultCenter={defaultCoordinates}
         center={defaultCoordinates}
         defaultZoom={14}
-        margin={[50, 50, 50, 50]}
         options={''}
         onChange={''}
         onChildClick={''}
@@ -27,9 +26,11 @@ function AdventureMap({ locations }) {
             key={i}
             title={item.title}
             description={item.description}
-          >
-            <p>{item.name}</p>
-          </MapMarker>
+            imgUrl={item.imgUrl}
+            street={item.street}
+            zipcode={item.zipcode}
+            city={item.city}
+          ></MapMarker>
         ))}
       </GoogleMapReact>
     </Wrapper>
@@ -40,5 +41,4 @@ export default AdventureMap
 
 const Wrapper = styled.section`
   padding-top: 55px;
-  border: 1px solid red;
 `

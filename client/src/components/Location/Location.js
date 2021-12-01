@@ -1,17 +1,45 @@
 import styled from 'styled-components'
-import Extend from '../../assets/SVG/Extend.svg'
+import { useState } from 'react'
+function Location({
+  imgUrl,
+  title,
+  description,
+  lat,
+  lng,
+  category,
+  street,
+  zipcode,
+  city,
+}) {
+  const [showDetails, setshowDetails] = useState(false)
 
-function Location({ image, title, description, lat, lng, category }) {
+  const handleDetailsButtonClick = () => {
+    setshowDetails(showDetails ? false : true)
+  }
+
   return (
     <Wrapper>
       <StyledDescription>
-        <StyledImage src={image} alt="Image of location" />
+        <StyledImage src={imgUrl} alt="Image of location" />
         <CardTitle>{title}</CardTitle>
         <InformationRow>
-          <p>Rating</p>
-          <img src={Extend} />
+          <ButtonMore onClick={handleDetailsButtonClick}>
+            {showDetails ? 'less' : 'more'}
+          </ButtonMore>
           <CategoryTag>{category}</CategoryTag>
         </InformationRow>
+        {showDetails ? (
+          <HiddenWrapper>
+            <HiddenDescription>"{description}"</HiddenDescription>
+            <HiddenHeading>Address</HiddenHeading>
+            <p>
+              {street}, {zipcode}, {city}
+            </p>
+            <HiddenHeading>Coordinates</HiddenHeading>
+            <p>latitude: {lat}</p>
+            <p>longitude: {lng}</p>
+          </HiddenWrapper>
+        ) : null}
       </StyledDescription>
     </Wrapper>
   )
@@ -19,16 +47,26 @@ function Location({ image, title, description, lat, lng, category }) {
 
 export default Location
 
+const HiddenDescription = styled.p`
+  word-break: break-all;
+  padding-top: 10px;
+  font-style: oblique;
+`
+
+const HiddenHeading = styled.p`
+  font-weight: bold;
+`
+
 const Wrapper = styled.li`
   overflow: hidden;
   border-radius: 5px;
-  background-color: #fff;
+    background-color: #fff;
   display: flex;
   justify-content: space-between;
   height: auto;
   padding-right: 5px;
   margin-bottom: 10px;
-  border-style: outset;
+  border 5px outset #cb2d3e;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -63,12 +101,34 @@ const CardTitle = styled.p`
 `
 
 const InformationRow = styled.section`
+  padding-left: 50px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+`
+
+const HiddenWrapper = styled.section`
+  font-size: 15px;
+  margin: 5px;
+`
+
+const ButtonMore = styled.button`
+  width: 50%;
+  background-color: #fab371;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  margin-top: 15px;
+  border: 3px outset #fab371;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 `
 
 const CategoryTag = styled.div`
-  font-size: 1.2rem;
+  font-variant: small-caps;
+  font-size: 1rem;
   margin: auto;
   padding: 7px;
   width: auto;
